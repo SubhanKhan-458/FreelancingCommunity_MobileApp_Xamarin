@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IPTMobileApp.LoggedinPage_Client">
+    <ScrollView>
+        <StackLayout>
+            <Image Source="Freelancer" Aspect="AspectFill" HeightRequest="200"/>
+            <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto" RowSpacing="25" HorizontalOptions="Start" VerticalOptions="CenterAndExpand" Padding="30,0">
+                <Label Grid.Row="0" Text="Tell us what you need done" TextColor="#a6a5a0" FontSize="20" FontAttributes="Bold"/>
+                <Label Grid.Row="1" Text="Contact skilled freelancers within minutes. View profiles, ratings, portfolios and chat with them. Pay the freelancer only when you are 100% satisfied with their work." TextColor="#a6a5a0" FontSize="15"/>
+
+                <Label Grid.Row="2" Text="Name" TextColor="#a6a5a0" FontSize="15" />
+                <Entry x:Name="usernameEntry" Grid.Row="3" HeightRequest="40" BackgroundColor="#fdfbf6" Placeholder="P.name" />
+               
+                <Label Grid.Row="4" Text="Description" TextColor="#a6a5a0" FontSize="15" />
+                <Entry x:Name="passwordEntry" Grid.Row="5" HeightRequest="40" BackgroundColor="#fdfbf6" Placeholder="P.desc" IsPassword="true" />
+
+                <Label Grid.Row="6" Text="Price" TextColor="#a6a5a0" FontSize="15" />
+                <Entry x:Name="passwordEntr" Grid.Row="7" HeightRequest="40" BackgroundColor="#fdfbf6" Placeholder="Price" IsPassword="true" />
+            
+                 <Label Grid.Row="8" Text="Deadline" TextColor="#a6a5a0" FontSize="15" />
+                <DatePicker MinimumDate="01/01/2018" Grid.Row="9"
+                MaximumDate="12/31/2018"
+                Date="06/21/2018" />
+
+                <Button Grid.Row="10" Text="Post Project" BackgroundColor="#fd684d" TextColor="White" CornerRadius="20" FontSize="15" FontAttributes="Bold" HorizontalOptions="FillAndExpand" />
+
+            </Grid>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

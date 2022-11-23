@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IPTMobileApp.ProfilePage">
+    <ScrollView>
+        <StackLayout>
+            <Image Source="person" Aspect="AspectFill" HeightRequest="530"/>
+            <Frame HasShadow="False" CornerRadius="40" Margin="0,-50,0,0" VerticalOptions="FillAndExpand">
+                <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto" ColumnDefinitions="*,*,*">
+                    <Button Grid.Row="0" Grid.Column="2" HeightRequest="56" WidthRequest="56" CornerRadius="28" BackgroundColor=" #FF0000" ImageSource="phone" VerticalOptions="Start" HorizontalOptions="End" Margin="0,-50,0,0"></Button>
+                    <Button Grid.Row="0" Grid.Column="2" HeightRequest="56" WidthRequest="56" CornerRadius="28" BackgroundColor=" #FF0000" ImageSource="mail" VerticalOptions="Start" HorizontalOptions="Start" Margin="0,-50,0,0"></Button>
+                    <Label Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Text="John Doe" FontSize="25" FontAttributes="Bold" Padding="20,10,0,0"/>
+                    <Label Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Text="Username" Padding="20,10,0,0"  TextColor="Silver"/>
+                    <Label Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" Padding="20,10,0,0">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Email: " FontAttributes="Bold"/>
+                                <Span Text="JohnDoe@gmail.com"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label Grid.Row="4" Grid.Column="0" Text="Projects Done" TextColor="Silver" FontAttributes="Bold" HorizontalTextAlignment="Center" Padding="10,20,0,0"/>
+                    <Label Grid.Row="4" Grid.Column="1" Text="Status" TextColor="Silver" FontAttributes="Bold" HorizontalTextAlignment="Center" Padding="10,20,0,0"/>
+
+                    <Label Grid.Row="5" Grid.Column="0" Text="12" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+                    <Label Grid.Row="5" Grid.Column="1" Text="Perfect" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+
+                    <Button Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="3" Text="Follow" BackgroundColor="#fd684d" TextColor="White" CornerRadius="20" FontSize="15" FontAttributes="Bold" HorizontalOptions="FillAndExpand" />
+
+                </Grid>
+            </Frame>
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>
