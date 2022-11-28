@@ -15,6 +15,14 @@ namespace IPTMobileApp
 		public LoggedinPage_Freelancer ()
 		{
 			InitializeComponent ();
+			displayCardBox();
+		}
+		private void displayCardBox()
+		{
+			for(int i=0; i<2; i++)
+			{
+				
+			}
 		}
 	}
 }

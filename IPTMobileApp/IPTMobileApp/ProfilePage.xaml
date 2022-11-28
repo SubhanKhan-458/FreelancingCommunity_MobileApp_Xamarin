@@ -7,8 +7,8 @@
             <Image Source="person" Aspect="AspectFill" HeightRequest="530"/>
             <Frame HasShadow="False" CornerRadius="40" Margin="0,-50,0,0" VerticalOptions="FillAndExpand">
                 <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto" ColumnDefinitions="*,*,*">
-                    <Button Grid.Row="0" Grid.Column="2" HeightRequest="56" WidthRequest="56" CornerRadius="28" BackgroundColor=" #FF0000" ImageSource="phone" VerticalOptions="Start" HorizontalOptions="End" Margin="0,-50,0,0"></Button>
-                    <Button Grid.Row="0" Grid.Column="2" HeightRequest="56" WidthRequest="56" CornerRadius="28" BackgroundColor=" #FF0000" ImageSource="mail" VerticalOptions="Start" HorizontalOptions="Start" Margin="0,-50,0,0"></Button>
+                    <Button Grid.Row="0" Grid.Column="2" HeightRequest="56" WidthRequest="56" CornerRadius="28" BackgroundColor=" #FF0000" ImageSource="phone" VerticalOptions="Start" HorizontalOptions="End" Margin="0,0,0,0" ></Button>
+                    <Button Grid.Row="0" Grid.Column="2" HeightRequest="56" WidthRequest="56" CornerRadius="28" BackgroundColor=" #FF0000" ImageSource="mail" VerticalOptions="Start" HorizontalOptions="Start" Margin="0,0,0,0"></Button>
                     <Label Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Text="John Doe" FontSize="25" FontAttributes="Bold" Padding="20,10,0,0"/>
                     <Label Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Text="Username" Padding="20,10,0,0"  TextColor="Silver"/>
                     <Label Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" Padding="20,10,0,0">

@@ -22,7 +22,10 @@
     <EmbeddedResource Update="LoggedinPage_Freelancer.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="LoggedInTabbedPage.xaml">
+    <EmbeddedResource Update="LoggedinTabbedPage_Client.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="LoggedinTabbedPage_Freelancer.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="LoginPage.xaml">

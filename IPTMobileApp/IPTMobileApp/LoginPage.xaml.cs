@@ -19,7 +19,12 @@ namespace IPTMobileApp
 
         private void Button_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new LoggedInTabbedPage());
+            if(usernameEntry.Text=="Freelancer" && passwordEntry.Text=="Freelancer")
+                Navigation.PushAsync(new LoggedinTabbedPage_Freelancer());
+            else if(usernameEntry.Text == "Client" && passwordEntry.Text == "Client")
+                Navigation.PushAsync(new LoggedinTabbedPage_Client());
+            else
+                Navigation.PushAsync(new SignUpPage());
         }
     }
 }

@@ -10,16 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace IPTMobileApp
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class SignUpPage : ContentPage
+    public partial class LoggedinTabbedPage_Freelancer : TabbedPage
     {
-        public SignUpPage()
+        public LoggedinTabbedPage_Freelancer()
         {
             InitializeComponent();
-        }
-
-        private void Button_Clicked(object sender, EventArgs e)
-        {
-            //Access with these names: Fname.Text, Lname.Text, Email.Text, Password.Text, CPassword.Text, Role.Text, CPhone_no.Text
         }
     }
 }

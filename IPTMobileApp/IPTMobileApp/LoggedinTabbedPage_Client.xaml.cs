@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace IPTMobileApp
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class LoggedInTabbedPage : TabbedPage
+    public partial class LoggedinTabbedPage_Client : TabbedPage
     {
-        public LoggedInTabbedPage ()
+        public LoggedinTabbedPage_Client()
         {
             InitializeComponent();
         }

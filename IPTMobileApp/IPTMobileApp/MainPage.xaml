@@ -9,7 +9,7 @@
     </ContentPage.BindingContext>
 
     <Grid>
-        <Image Source="freelancer" Aspect="AspectFill"/>
+        <Image Source="Front" Aspect="AspectFill"/>
         <BoxView>
             <BoxView.Background>
                 <LinearGradientBrush StartPoint="1,0" EndPoint="1,1">

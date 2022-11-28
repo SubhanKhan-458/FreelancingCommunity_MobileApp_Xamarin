@@ -15,7 +15,7 @@
                         iOS="10"/>
                 </Frame.Margin>-->
 
-                <StackLayout HorizontalOptions="FillAndExpand" Orientation="Vertical">
+                <StackLayout xmlns:name="CardBox" HorizontalOptions="FillAndExpand" Orientation="Vertical">
                     <Image  Source="https://picsum.photos/seed/picsum/1000/900" Aspect="Fill" HeightRequest="200" />
                     <StackLayout HorizontalOptions="FillAndExpand" Orientation="Vertical" Padding="15">
                         <Label TextColor="#222" FontSize = "25" Text="Project Title"/>
@@ -35,7 +35,7 @@
                         iOS="10"/>
                 </Frame.Margin>-->
 
-                <StackLayout HorizontalOptions="FillAndExpand" Orientation="Vertical">
+                <!--<StackLayout HorizontalOptions="FillAndExpand" Orientation="Vertical">
                     <Image  Source="https://picsum.photos/seed/picsum/1000/900" Aspect="Fill" HeightRequest="200" />
                     <StackLayout HorizontalOptions="FillAndExpand" Orientation="Vertical" Padding="15">
                         <Label TextColor="#222" FontSize = "25" Text="Project Title"/>
@@ -43,7 +43,7 @@
                         <Button Margin="0,15,0,0" Text="BUTTON" TextColor="White" BackgroundColor="#0097e6"/>
                     </StackLayout>
 
-                </StackLayout>
+                </StackLayout>-->
             </Frame>
         </StackLayout>
     </ScrollView>
