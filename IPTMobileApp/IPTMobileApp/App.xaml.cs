@@ -1,6 +1,4 @@
-﻿using System;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
+﻿using Xamarin.Forms;
 
 namespace IPTMobileApp
 {
@@ -11,7 +9,7 @@ namespace IPTMobileApp
             InitializeComponent();
             Device.SetFlags(new[] { "MediaElement_Experimental", "Brush_Experimental" });
             MainPage = new NavigationPage(new MainPage());
-            
+
         }
 
         protected override void OnStart()
