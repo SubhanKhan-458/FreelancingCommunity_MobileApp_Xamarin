@@ -29,6 +29,7 @@ namespace IPTMobileApp
                 passwordEntry.BackgroundColor = Color.LightPink;
             }
             else
+
             {
                 try
                 {
@@ -60,6 +61,7 @@ namespace IPTMobileApp
                     await Navigation.PushAsync(new LoginPage());
                 }
             }
+
         }
     }
 }

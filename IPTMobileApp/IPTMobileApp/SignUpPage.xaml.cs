@@ -18,6 +18,7 @@ namespace IPTMobileApp
         private async void Button_Clicked(object sender, EventArgs e)
         {
             //Access with these names: Fname.Text, Lname.Text, Email.Text, Password.Text, CPassword.Text, Role.Text, CPhone_no.Text
+
             if(Fname.Text == "") 
                 Fname.BackgroundColor = Color.LightPink;
             else if(Lname.Text == "") 
@@ -82,7 +83,7 @@ namespace IPTMobileApp
                 {
                     await Navigation.PushAsync(new SignUpPage());
                 }   
-            }
+
         }
     }
 }

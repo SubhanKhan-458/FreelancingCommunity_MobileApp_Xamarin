@@ -6,5 +6,6 @@
              android:TabbedPage.ToolbarPlacement="Bottom">
     <!--Pages can be added as references or inline-->
     <IPTMobileApplication:LoggedinPage_Client Title="Home" IconImageSource="homepic"></IPTMobileApplication:LoggedinPage_Client>
+    <IPTMobileApplication:Addproject_Client Title="Add Project" IconImageSource="Addproject"></IPTMobileApplication:Addproject_Client>
     <IPTMobileApplication:ProfilePage Title="Profile" IconImageSource="profilepic"></IPTMobileApplication:ProfilePage>
 </TabbedPage>
