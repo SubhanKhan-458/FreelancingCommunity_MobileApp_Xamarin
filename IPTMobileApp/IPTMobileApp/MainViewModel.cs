@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace IPTMobileApp
 {
@@ -22,7 +20,7 @@ namespace IPTMobileApp
         };
         }
     }
-public class Onboarding
+    public class Onboarding
     {
         public string Heading { get; set; }
         public string Caption { get; set; }
@@ -31,4 +29,4 @@ public class Onboarding
 
 
 
-       
+
