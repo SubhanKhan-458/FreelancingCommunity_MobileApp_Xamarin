@@ -24,7 +24,7 @@ namespace IPTMobileApp
             else if(usernameEntry.Text == "Client" && passwordEntry.Text == "Client")
                 Navigation.PushAsync(new LoggedinTabbedPage_Client());
             else
-                Navigation.PushAsync(new SignUpPage());
+                Navigation.PushAsync(new LoginPage());
         }
     }
 }
