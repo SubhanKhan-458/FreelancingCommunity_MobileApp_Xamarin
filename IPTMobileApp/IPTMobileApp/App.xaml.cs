@@ -10,7 +10,7 @@ namespace IPTMobileApp
         {
             InitializeComponent();
             Device.SetFlags(new[] { "MediaElement_Experimental", "Brush_Experimental" });
-            MainPage = new NavigationPage(new MainPage());
+            MainPage = new NavigationPage(new LoggedinPage_Client());
             
         }
 

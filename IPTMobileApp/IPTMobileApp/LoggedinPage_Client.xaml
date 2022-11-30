@@ -2,25 +2,49 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="IPTMobileApp.LoggedinPage_Client">
+    <ScrollView>
+        <StackLayout>
+            <Label Text="Welcome Client Subhan!" HorizontalOptions="Center"/>
+            <ListView ItemsSource="{Binding ListDetails}" BackgroundColor="WhiteSmoke" HasUnevenRows="True" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid Padding="4" Margin="4">
+                                <!--<Grid.RowDefinitions>
+                                    <RowDefinition Height="1*"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width=".5*"></ColumnDefinition>
+                                    <ColumnDefinition Width=".5*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>-->
+                                <Frame IsClippedToBounds="True" Grid.Row="0" HasShadow="True" Padding="0" BackgroundColor="White">
+                                    <StackLayout>
+                                        <BoxView HeightRequest="90" WidthRequest="6"></BoxView>
+                                        <Image Source="{Binding Img1}" HorizontalOptions="Center"/>
+                                        <!--Project Name-->
+                                        <Grid Grid.Row="4" Grid.Column="2">
+                                            <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Text="{Binding PName}" HorizontalOptions="Center" FontAttributes="Bold"/>
+                                            <!--Project Description-->
+                                            <Label Grid.Row="1" Grid.Column="0" Text="Description: " HorizontalOptions="Start"/>
+                                            <Label Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="1" Text="{Binding PDescription}" HorizontalOptions="End"/>
+                                            <!--Project Cost-->
+                                            <Label Grid.Row="2" Grid.Column="0" Text="Cost: " HorizontalOptions="Start"/>
+                                            <Label Grid.Row="2" Grid.Column="1" Text="{Binding PCost}" HorizontalOptions="StartAndExpand"/>
+                                            <!--Project Deadline-->
+                                            <Label Grid.Row="3" Grid.Column="0" Text="Deadline: " HorizontalOptions="Start"/>
+                                            <Label Grid.Row="3" Grid.Column="1" Text="{Binding PDeadline}" HorizontalOptions="StartAndExpand"/>
 
-    <StackLayout>
-        <Label Text="Welcome Freelancer Subhan!" HorizontalOptions="Center"/>
-        <ListView ItemsSource="{Binding ListDetails}" BackgroundColor="WhiteSmoke" HasUnevenRows="True" >
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
-                        <Grid Padding="4" Margin="4" Grid.Row="1" Grid.Column="2">
-                            <Frame IsClippedToBounds="True" Grid.Row="0" HasShadow="True" Padding="0" BackgroundColor="White">
-                                <StackLayout>
-                                    <Image Source="{Binding Img1}" HorizontalOptions="Center"/>
-                                    <Label Text="{Binding Name}" HorizontalOptions="Center"/>
-                                </StackLayout>
-                            </Frame>
-                        </Grid>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-    </StackLayout>
-    
+                                            <Button Grid.Row="4" Grid.Column="0" Text="Accept" HorizontalOptions="End"/>
+                                            <Button Grid.Row="4" Grid.Column="1" Text="Decline" HorizontalOptions="Start"/>
+                                        </Grid>
+                                    </StackLayout>
+                                </Frame>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ScrollView>
+
 </ContentPage>
