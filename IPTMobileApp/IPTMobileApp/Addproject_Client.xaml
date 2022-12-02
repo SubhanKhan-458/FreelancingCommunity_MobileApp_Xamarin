@@ -10,20 +10,21 @@
                 <Label Grid.Row="1" Text="Contact skilled freelancers within minutes. View profiles, ratings, portfolios and chat with them. Pay the freelancer only when you are 100% satisfied with their work." TextColor="#a6a5a0" FontSize="15"/>
 
                 <Label Grid.Row="2" Text="Name" TextColor="#a6a5a0" FontSize="15" />
-                <Entry x:Name="usernameEntry" Grid.Row="3" HeightRequest="40" BackgroundColor="#fdfbf6" Placeholder="P.name" />
+                <Entry x:Name="GigName" Grid.Row="3" HeightRequest="40" BackgroundColor="#fdfbf6" Placeholder="P.name" Text=""/>
 
                 <Label Grid.Row="4" Text="Description" TextColor="#a6a5a0" FontSize="15" />
-                <Entry x:Name="passwordEntry" Grid.Row="5" HeightRequest="40" BackgroundColor="#fdfbf6" Placeholder="P.desc" IsPassword="true" />
+                <Entry x:Name="Description" Grid.Row="5" HeightRequest="40" BackgroundColor="#fdfbf6" Placeholder="P.desc" Text="" />
 
-                <Label Grid.Row="6" Text="Price" TextColor="#a6a5a0" FontSize="15" />
-                <Entry x:Name="passwordEntr" Grid.Row="7" HeightRequest="40" BackgroundColor="#fdfbf6" Placeholder="Price" IsPassword="true" />
+                <Label Grid.Row="6" Text="Pay" TextColor="#a6a5a0" FontSize="15" />
+                <Entry x:Name="Pay" Grid.Row="7" HeightRequest="40" BackgroundColor="#fdfbf6" Text=""/>
 
                 <Label Grid.Row="8" Text="Deadline" TextColor="#a6a5a0" FontSize="15" />
                 <DatePicker MinimumDate="01/01/2018" Grid.Row="9"
-                MaximumDate="12/31/2018"
-                Date="06/21/2018" />
-
-                <Button Grid.Row="10" Text="Post Project" BackgroundColor="#fd684d" TextColor="White" CornerRadius="20" FontSize="15" FontAttributes="Bold" HorizontalOptions="FillAndExpand" />
+                MaximumDate="12/31/2099"
+                Date="11/30/2022" 
+                x:Name="Deadline" 
+                />
+                <Button Grid.Row="10" Text="Post Project" BackgroundColor="#fd684d" TextColor="White" CornerRadius="20" FontSize="15" FontAttributes="Bold" HorizontalOptions="FillAndExpand" Clicked="Button_Clicked_1"/>
 
             </Grid>
         </StackLayout>
