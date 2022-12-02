@@ -37,7 +37,7 @@
             <!--<telerikInput:RadEntry Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="2" IsPassword="True" BorderStyle="{StaticResource EntryBorderStyle}" HeightRequest="40" WatermarkText="******" BackgroundColor="#fdfbf6"/>-->
             <!-- Role-->
             <Label Grid.Row="12" Grid.Column="0" Text="Role" TextColor="#787878" FontSize="15" />
-            <Picker x:Name="Role" Grid.Row="13" Grid.Column="0" Grid.ColumnSpan="1" Margin="0,0,100,0" SelectedIndex="1">
+            <Picker x:Name="Role" Grid.Row="13" Grid.Column="0" Grid.ColumnSpan="2" Margin="0,0,100,0" SelectedIndex="1" >
                 <Picker.ItemsSource>
                     <x:Array Type="{x:Type x:String}">
                         <x:String>Freelancer</x:String>
@@ -48,7 +48,7 @@
             <!--<telerikInput:RadEntry Grid.Row="11" Grid.Column="1" Margin="-100,0,0,0" BorderStyle="{StaticResource EntryBorderStyle}" HeightRequest="40" WatermarkText="(XXX) XXX-XXXX" BackgroundColor="#fdfbf6"/>-->
             <!-- Register button-->
             <Label Grid.Row="14" Text="Phone #" TextColor="#787878" FontSize="15" />
-            <Entry x:Name="CPhone_no" Grid.Row="15" Grid.Column="0" Grid.ColumnSpan="2" HeightRequest="40" BackgroundColor="#fdfbf6" Text=""/>
+            <Entry x:Name="CPhone_no" Grid.Row="15" Grid.Column="0" Grid.ColumnSpan="2" HeightRequest="40" BackgroundColor="#fdfbf6" Placeholder="xxxx-xxxxxxx"/>
 
             <Button Grid.Row="16" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="#fd684d" Text="Register" TextColor="White" CornerRadius="20" FontSize="15" FontAttributes="Bold" HorizontalOptions="FillAndExpand" Clicked="Button_Clicked"/>
 

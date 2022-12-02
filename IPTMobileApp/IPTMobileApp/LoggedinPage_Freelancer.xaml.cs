@@ -100,17 +100,17 @@ namespace IPTMobileApp
                     if (responseMessage.IsSuccessStatusCode)
                     {
                         Debug.WriteLine("Offer Inserted");
-                        await Navigation.PushAsync(new LoggedinPage_Freelancer());
+                        await Navigation.PushAsync(new LoggedinTabbedPage_Freelancer());
                     }
                     else
                     {
                         Debug.WriteLine("Offer Not Inserted");
-                        await Navigation.PushAsync(new LoggedinPage_Freelancer());
+                        await Navigation.PushAsync(new LoggedinTabbedPage_Freelancer());
                     }
                 }
                 catch
                 {
-                    await Navigation.PushAsync(new LoggedinPage_Freelancer());
+                    await Navigation.PushAsync(new LoggedinTabbedPage_Freelancer());
                 }
             }
 
