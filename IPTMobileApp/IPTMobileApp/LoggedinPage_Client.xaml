@@ -1,22 +1,15 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="IPTMobileApp.LoggedinPage_Client">
     <ScrollView>
         <StackLayout>
             <Label Text="Welcome Client Subhan!" HorizontalOptions="Center"/>
-            <ListView ItemsSource="{Binding ListDetails}" BackgroundColor="WhiteSmoke" HasUnevenRows="True" >
+            <ListView ItemsSource="{Binding ListDetails}" BackgroundColor="WhiteSmoke" HasUnevenRows="True" ItemSelected="ListView_ItemSelected">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
                             <Grid Padding="4" Margin="4">
-                                <!--<Grid.RowDefinitions>
-                                    <RowDefinition Height="1*"></RowDefinition>
-                                </Grid.RowDefinitions>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width=".5*"></ColumnDefinition>
-                                    <ColumnDefinition Width=".5*"></ColumnDefinition>
-                                </Grid.ColumnDefinitions>-->
                                 <Frame IsClippedToBounds="True" Grid.Row="0" HasShadow="True" Padding="0" BackgroundColor="White">
                                     <StackLayout>
                                         <BoxView HeightRequest="90" WidthRequest="6"></BoxView>
@@ -24,18 +17,35 @@
                                         <!--Project Name-->
                                         <Grid Grid.Row="4" Grid.Column="2">
                                             <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Text="{Binding PName}" HorizontalOptions="Center" FontAttributes="Bold"/>
-                                            <!--Project Description-->
-                                            <Label Grid.Row="1" Grid.Column="0" Text="Description: " HorizontalOptions="Start"/>
-                                            <Label Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="1" Text="{Binding PDescription}" HorizontalOptions="End"/>
-                                            <!--Project Cost-->
-                                            <Label Grid.Row="2" Grid.Column="0" Text="Cost: " HorizontalOptions="Start"/>
-                                            <Label Grid.Row="2" Grid.Column="1" Text="{Binding PCost}" HorizontalOptions="StartAndExpand"/>
-                                            <!--Project Deadline-->
-                                            <Label Grid.Row="3" Grid.Column="0" Text="Deadline: " HorizontalOptions="Start"/>
-                                            <Label Grid.Row="3" Grid.Column="1" Text="{Binding PDeadline}" HorizontalOptions="StartAndExpand"/>
 
-                                            <Button Grid.Row="4" Grid.Column="0" Text="Accept" HorizontalOptions="End"/>
-                                            <Button Grid.Row="4" Grid.Column="1" Text="Decline" HorizontalOptions="Start"/>
+                                            <!--Project Description-->
+                                            <Label Grid.Row="1" Grid.Column="0" Text="Gig Description: " HorizontalOptions="Start" FontSize="17" TextColor="Black"/>
+                                            <Label Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="1" Text="{Binding PDescription}" HorizontalOptions="End" FontSize="17" TextColor="Black"/>
+
+                                            <!--Project Cost-->
+                                            <Label Grid.Row="2" Grid.Column="0" Text="Pay " HorizontalOptions="Start" FontSize="17" TextColor="Black"/>
+                                            <Label Grid.Row="2" Grid.Column="1" Text="{Binding PCost}" HorizontalOptions="StartAndExpand" FontSize="17" TextColor="Black"/>
+
+                                            <!--Project Deadline-->
+                                            <Label Grid.Row="3" Grid.Column="0" Text="Deadline: " HorizontalOptions="Start" FontSize="17" TextColor="Black"/>
+                                            <Label Grid.Row="3" Grid.Column="1" Text="{Binding PDeadline}" HorizontalOptions="StartAndExpand" FontSize="17" TextColor="Black"/>
+
+                                            <!--Freelancer Name-->
+                                            <Label Grid.Row="4" Grid.Column="0" Text="Freelancer Name: " HorizontalOptions="Start" FontSize="17" TextColor="Black"/>
+                                            <Label Grid.Row="4" Grid.Column="1" Text="{Binding FreelancerName}" HorizontalOptions="StartAndExpand" FontSize="17" TextColor="Black"/>
+
+                                            <!--Freelancer Name-->
+                                            <Label Grid.Row="5" Grid.Column="0" Text="Freelancer Description: " HorizontalOptions="Start" FontSize="17" TextColor="Black"/>
+                                            <Label Grid.Row="5" Grid.Column="1" Text="{Binding FreelancerDesc}" HorizontalOptions="StartAndExpand" FontSize="17" TextColor="Black"/>
+
+                                            <!--Freelancer Name-->
+                                            <Label Grid.Row="6" Grid.Column="0" Text="Freelancer Email: " HorizontalOptions="Start" FontSize="17" TextColor="Black"/>
+                                            <Label Grid.Row="6" Grid.Column="1" Text="{Binding FreelancerEmail}" HorizontalOptions="StartAndExpand" FontSize="17" TextColor="Black"/>
+
+                                            <!--
+                                            <Button Grid.Row="7" Grid.Column="0" Text="Accept" HorizontalOptions="End" FontSize="17" TextColor="Black" Clicked="Accept_Clicked"/>
+                                            <Button Grid.Row="7" Grid.Column="1" Text="Reject" HorizontalOptions="Start" FontSize="17" TextColor="Black" Clicked="Reject_Clicked"/>
+                                            -->
                                         </Grid>
                                     </StackLayout>
                                 </Frame>

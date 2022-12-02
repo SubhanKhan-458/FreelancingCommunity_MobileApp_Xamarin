@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="IPTMobileApp.LoggedinPage_Freelancer">
@@ -6,7 +6,7 @@
     <ScrollView>
         <StackLayout>
             <Label Text="Welcome Freelancer Subhan!" HorizontalOptions="Center"/>
-            <ListView ItemsSource="{Binding ListDetails}" BackgroundColor="WhiteSmoke" HasUnevenRows="True" >
+            <ListView ItemsSource="{Binding ListDetails}" BackgroundColor="WhiteSmoke" HasUnevenRows="True" ItemSelected="ListView_ItemSelected" ItemTapped="ListView_ItemTapped">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -24,20 +24,17 @@
                                         <Image Source="{Binding Img1}" HorizontalOptions="Center"/>
                                         <!--Project Name-->
                                         <Grid Grid.Row="4" Grid.Column="2">
-                                            <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Text="{Binding PName}" HorizontalOptions="Center" FontAttributes="Bold"/>
+                                            <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Text="{Binding PName}" HorizontalOptions="Center" FontAttributes="Bold" FontSize="17" TextColor="Black"/>
                                             <!--Project Description-->
-                                            <Label Grid.Row="1" Grid.Column="0" Text="Description: " HorizontalOptions="Start"/>
-                                            <Label Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="1" Text="{Binding PDescription}" HorizontalOptions="End"/>
+                                            <Label Grid.Row="1" Grid.Column="0" Text="Description: " HorizontalOptions="Start" FontSize="17" TextColor="Black"/>
+                                            <Label Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="1" Text="{Binding PDescription}" FontSize="17" TextColor="Black" HorizontalOptions="End"/>
                                             <!--Project Cost-->
-                                            <Label Grid.Row="2" Grid.Column="0" Text="Cost: " HorizontalOptions="Start"/>
+                                            <Label Grid.Row="2" Grid.Column="0" Text="Cost: " HorizontalOptions="Start" FontSize="17" TextColor="Black"/>
                                             <!--<Label Grid.Row="2" Grid.Column="1" Text="{Binding PCost}" HorizontalOptions="StartAndExpand"/>-->
-                                            <Entry x:Name="ChangedCost_Enrty" Grid.Row="2" Grid.Column="1" Placeholder="{Binding PCost}" HorizontalOptions="StartAndExpand" HeightRequest="40"/>
+                                            <Entry x:Name="ChangedCost_Enrty" Grid.Row="2" Grid.Column="1" Text="{Binding PCost}" HorizontalOptions="StartAndExpand" HeightRequest="40"/>
                                             <!--Project Deadline-->
-                                            <Label Grid.Row="3" Grid.Column="0" Text="Deadline: " HorizontalOptions="Start"/>
-                                            <Label Grid.Row="3" Grid.Column="1" Text="{Binding PDeadline}" HorizontalOptions="StartAndExpand"/>
-
-                                            <Button Grid.Row="4" Grid.ColumnSpan="2" Text="Accept Offer" HorizontalOptions="CenterAndExpand"/>
-                                         
+                                            <Label Grid.Row="3" Grid.Column="0" Text="Deadline: " HorizontalOptions="Start" FontSize="17" TextColor="Black"/>
+                                            <Label Grid.Row="3" Grid.Column="1" Text="{Binding PDeadline}" HorizontalOptions="StartAndExpand" FontSize="17" TextColor="Black"/>
                                         </Grid>
                                     </StackLayout>
                                 </Frame>
@@ -48,5 +45,5 @@
             </ListView>
         </StackLayout>
     </ScrollView>
-    
+
 </ContentPage>
