@@ -17,18 +17,12 @@ namespace IPTMobileApp
 	public partial class Addproject_Client : ContentPage
 	{
         public JObject user;
-		public Addproject_Client (JObject user)
-		{
-			InitializeComponent ();
-            this.user = user;
-            Debug.WriteLine(user["responseData"]["roleId"]);
-		}
 
-        public Addproject_Client ()
+        public Addproject_Client()
 		{
 			InitializeComponent ();
-            this.user = LoginPage.loggedInUser;
-            Debug.WriteLine(user["responseData"]["roleId"]);
+            //this.user = LoginPage.loggedInUser;
+            //Debug.WriteLine(user["responseData"]["roleId"]);
         }
 
         private async void Button_Clicked_1(object sender, EventArgs e)
@@ -43,14 +37,16 @@ namespace IPTMobileApp
             {
                 try
                 {
-                    Debug.WriteLine(Deadline.Date.ToString());
                     var data = new StringContent(JsonConvert.SerializeObject(new
                     {
-                        creatorId = user["responseData"]["userId"],
+                        creatorId = LoginPage.loggedInUser["responseData"]["userId"].ToString(),
+                        gigName = GigName.Text,
                         description = Description.Text,
-                        pay = Int32.Parse(Pay.Text),
+                        pay = Double.Parse(Pay.Text),
                         deadline = Deadline.Date.ToString()
                     }), System.Text.Encoding.UTF8, "application/json");
+
+                    Debug.WriteLine(data);
 
                     var client = new HttpClient();
                     client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", "cd53344c9a0e4abeb55ea6322888d4d6");
@@ -59,17 +55,17 @@ namespace IPTMobileApp
                     if (responseMessage.IsSuccessStatusCode)
                     {
                         Debug.WriteLine("Gig Inserted");
-                        await Navigation.PushAsync(new LoggedinPage_Client());
+                        await Navigation.PushModalAsync(new ClientGigsView());
                     }
                     else
                     {
                         Debug.WriteLine("Gig Not Inserted");
-                        await Navigation.PushAsync(new Addproject_Client());
+                        await Navigation.PushModalAsync(new Addproject_Client());
                     }
                 }
                 catch
                 {
-                    await Navigation.PushAsync(new Addproject_Client());
+                    await Navigation.PushModalAsync(new Addproject_Client());
                 }
             }
         }

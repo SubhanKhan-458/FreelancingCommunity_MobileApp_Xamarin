@@ -53,7 +53,7 @@ namespace IPTMobileApp
             ListDetails = new ObservableCollection<Card>();
 			for (int i = 0; i < gigList.Count(); i++)	//Like this make list and access each..
 			{
-                ListDetails.Add(new Card { Img1 = "freelancer", PName = "Medicare $olutions", PDescription = gigList[i]["description"].ToString(), PCost = gigList[i]["pay"].ToString(), PDeadline = gigList[i]["deadline"].ToString() });
+                ListDetails.Add(new Card { Img1 = "freelancer", PName = gigList[i]["gigName"].ToString(), PDescription = gigList[i]["description"].ToString(), PCost = gigList[i]["pay"].ToString(), PDeadline = gigList[i]["deadline"].ToString() });
 			}	
             BindingContext = this;
         }
@@ -100,17 +100,17 @@ namespace IPTMobileApp
                     if (responseMessage.IsSuccessStatusCode)
                     {
                         Debug.WriteLine("Offer Inserted");
-                        await Navigation.PushAsync(new LoggedinPage_Freelancer());
+                        await DisplayAlert("Success", "Offer Posted", "OK");
                     }
                     else
                     {
                         Debug.WriteLine("Offer Not Inserted");
-                        await Navigation.PushAsync(new LoggedinPage_Freelancer());
+                        await DisplayAlert("Failure", "Offer Not Posted", "OK");
                     }
                 }
                 catch
                 {
-                    await Navigation.PushAsync(new LoggedinPage_Freelancer());
+                    await Navigation.PushAsync(new LoginPage());
                 }
             }
 

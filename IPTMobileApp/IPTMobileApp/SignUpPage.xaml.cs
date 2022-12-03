@@ -38,6 +38,11 @@ namespace IPTMobileApp
                 CPassword.BackgroundColor = Color.LightPink;
             else if (CPhone_no.Text == "")
                 CPhone_no.BackgroundColor = Color.LightPink;
+            else if (Password.Text != CPassword.Text)
+            {
+                Password.BackgroundColor = Color.LightPink;
+                CPassword.BackgroundColor = Color.LightPink;
+            }
             else
             {
                 StringContent data;

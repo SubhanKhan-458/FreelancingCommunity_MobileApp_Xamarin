@@ -56,9 +56,13 @@ namespace IPTMobileApp
                     {
                         loggedInUser = res;
                         if (res["responseData"]["roleId"].ToString() == "1")
-                            await Navigation.PushAsync(new LoggedinPage_Freelancer());
+                        {
+                            await Navigation.PushModalAsync(new LoggedinTabbedPage_Freelancer());
+                        }
                         else if (res["responseData"]["roleId"].ToString() == "2")
-                            await Navigation.PushAsync(new LoggedinPage_Client());
+                        {
+                            await Navigation.PushModalAsync(new LoggedinTabbedPage_Client());
+                        }
                     }
                 }
                 catch
