@@ -15,25 +15,25 @@
             <!-- Basic information-->
             <!-- First name-->
             <Label Grid.Row="2" Grid.Column="0" Text="First name" TextColor="#787878" FontSize="15"/>
-            <Entry x:Name="Fname" Grid.Row="3" Grid.Column="0" HeightRequest="40" BackgroundColor="#fdfbf6" Placeholder="John" Text=""/>
+            <Entry x:Name="Fname" Grid.Row="3" Grid.Column="0" HeightRequest="40" BackgroundColor="#fdfbf6" Placeholder="John" Text="" TextColor="Black"/>
             <!--<telerikInput:RadEntry Grid.Row="3" Grid.Column="0" BorderStyle="{StaticResource EntryBorderStyle}" HeightRequest="40" BackgroundColor="#fdfbf6"/>-->
             <!-- Last name-->
             <Label Grid.Row="2" Grid.Column="1" Text="Last name" TextColor="#787878" FontSize="15"/>
-            <Entry x:Name="Lname" Grid.Row="3" Grid.Column="1" HeightRequest="40" BackgroundColor="#fdfbf6" Placeholder="Doe" Text=""/>
+            <Entry x:Name="Lname" Grid.Row="3" Grid.Column="1" HeightRequest="40" BackgroundColor="#fdfbf6" Placeholder="Doe" Text="" TextColor="Black"/>
             <!--<telerikInput:RadEntry Grid.Row="3" Grid.Column="1" BorderStyle="{StaticResource EntryBorderStyle}" HeightRequest="40" BackgroundColor="#fdfbf6"/>-->
             <!-- Email-->
             <Label Grid.Row="4" Grid.Column="0" Text="Email" TextColor="#787878" FontSize="15" />
-            <Entry x:Name="Email" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" HeightRequest="40" BackgroundColor="#fdfbf6" Placeholder="yourname@domain.com" Text=""/>
+            <Entry x:Name="Email" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" HeightRequest="40" BackgroundColor="#fdfbf6" Placeholder="yourname@domain.com" Text="" TextColor="Black"/>
             <!--Username-->
             <Label Grid.Row="6" Grid.Column="0" Text="Username" TextColor="#787878" FontSize="15" />
-            <Entry x:Name="Username" Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2" HeightRequest="40" BackgroundColor="#fdfbf6" Placeholder="john doe" Text=""/>
+            <Entry x:Name="Username" Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2" HeightRequest="40" BackgroundColor="#fdfbf6" Placeholder="john doe" Text="" TextColor="Black"/>
             <!--<telerikInput:RadEntry Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" BorderStyle="{StaticResource EntryBorderStyle}" HeightRequest="40" WatermarkText="yourname@domain.com" BackgroundColor="#fdfbf6"/>-->
             <!-- Password-->
             <Label Grid.Row="8" Grid.Column="0" Text="Password" TextColor="#787878" FontSize="15" />
-            <Entry x:Name="Password" Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="2" HeightRequest="40" BackgroundColor="#fdfbf6" Placeholder="******" IsPassword="True" Text=""/>
+            <Entry x:Name="Password" Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="2" HeightRequest="40" BackgroundColor="#fdfbf6" Placeholder="******" IsPassword="True" Text="" TextColor="Black"/>
             <!--<telerikInput:RadEntry Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2" IsPassword="True" BorderStyle="{StaticResource EntryBorderStyle}" HeightRequest="40" WatermarkText="******" BackgroundColor="#fdfbf6"/>-->
             <Label Grid.Row="10" Text="Confirm Password" TextColor="#787878" FontSize="15" />
-            <Entry x:Name="CPassword" Grid.Row="11" Grid.Column="0" Grid.ColumnSpan="2" HeightRequest="40" BackgroundColor="#fdfbf6" Placeholder="******" IsPassword="True" Text=""/>
+            <Entry x:Name="CPassword" Grid.Row="11" Grid.Column="0" Grid.ColumnSpan="2" HeightRequest="40" BackgroundColor="#fdfbf6" Placeholder="******" IsPassword="True" Text="" TextColor="Black"/>
             <!--<telerikInput:RadEntry Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="2" IsPassword="True" BorderStyle="{StaticResource EntryBorderStyle}" HeightRequest="40" WatermarkText="******" BackgroundColor="#fdfbf6"/>-->
             <!-- Role-->
             <Label Grid.Row="12" Grid.Column="0" Text="Role" TextColor="#787878" FontSize="15" />
@@ -48,7 +48,7 @@
             <!--<telerikInput:RadEntry Grid.Row="11" Grid.Column="1" Margin="-100,0,0,0" BorderStyle="{StaticResource EntryBorderStyle}" HeightRequest="40" WatermarkText="(XXX) XXX-XXXX" BackgroundColor="#fdfbf6"/>-->
             <!-- Register button-->
             <Label Grid.Row="14" Text="Phone #" TextColor="#787878" FontSize="15" />
-            <Entry x:Name="CPhone_no" Grid.Row="15" Grid.Column="0" Grid.ColumnSpan="2" HeightRequest="40" BackgroundColor="#fdfbf6" Placeholder="xxxx-xxxxxxx"/>
+            <Entry x:Name="CPhone_no" Grid.Row="15" Grid.Column="0" Grid.ColumnSpan="2" HeightRequest="40" BackgroundColor="#fdfbf6" Placeholder="xxxx-xxxxxxx" TextColor="Black"/>
 
             <Button Grid.Row="16" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="#fd684d" Text="Register" TextColor="White" CornerRadius="20" FontSize="15" FontAttributes="Bold" HorizontalOptions="FillAndExpand" Clicked="Button_Clicked"/>
 
