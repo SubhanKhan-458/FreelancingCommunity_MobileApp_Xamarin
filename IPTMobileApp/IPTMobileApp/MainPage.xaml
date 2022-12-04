@@ -6,7 +6,7 @@
 
     <ContentPage.BindingContext>
         <vm:MainViewModel/>
-    </ContentPage.BindingContext>
+    </ContentPage.BindingContext> 
 
     <Grid>
         <Image Source="Front" Aspect="AspectFill"/>
