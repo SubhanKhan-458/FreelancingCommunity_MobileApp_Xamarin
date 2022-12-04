@@ -20,12 +20,12 @@ namespace IPTMobileApp
         public GigModalPage(JToken gig)
         {
             InitializeComponent();
-            this.gig = gig;
 
+            this.gig = gig;
             GigName.Text = gig["gigName"].ToString();
             GigDescription.Text = gig["description"].ToString();
             GigPay.Text = gig["pay"].ToString();
-            GigDeadline.Date = (DateTime)gig["deadline"];
+            GigDeadline.Text = gig["deadline"].ToString(); 
         }
 
         //Update Gig
@@ -41,14 +41,19 @@ namespace IPTMobileApp
             {
                 try
                 {
+                    //Debug.WriteLine(GigDeadline.GetType().ToString());
+                    //if (GigDeadline.GetType() == typeof(String))
+                    //{
+                       // GigDeadline = DateTime.Parse(GigDeadline.ToString());
+                    //}
                     var data = new StringContent(JsonConvert.SerializeObject(new
                     {
-                        gigId = gig["gigId"].ToString(),
+                        gigId = this.gig["gigId"].ToString(),
                         creatorId = LoginPage.loggedInUser["responseData"]["userId"].ToString(),
                         gigName = GigName.Text,
                         description = GigDescription.Text,
                         pay = Double.Parse(GigPay.Text),
-                        deadline = GigDeadline.Date.ToString()
+                        deadline = GigDeadline.Text
                     }), System.Text.Encoding.UTF8, "application/json");
 
                     Debug.WriteLine(data);
@@ -62,6 +67,8 @@ namespace IPTMobileApp
                         Debug.WriteLine("Gig Updated");
                         await DisplayAlert("Success", "Gig Updated", "Ok");
                         await Navigation.PopModalAsync();
+                        await Navigation.PushAsync(new LoggedinTabbedPage_Client());
+                        
                     }
                     else
                     {
@@ -84,18 +91,22 @@ namespace IPTMobileApp
         {
             try
             {
+                //if (GigDeadline.GetType() == typeof(String))
+                //DateTime.Parse(GigDeadline.);
+                Debug.WriteLine(GigDeadline.GetType().ToString());
                 var client = new HttpClient();
                 client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", "cd53344c9a0e4abeb55ea6322888d4d6");
                 HttpRequestMessage request = new HttpRequestMessage
                 {
                     Content = new StringContent(JsonConvert.SerializeObject(new
                     {
+                        
                         gigId = gig["gigId"].ToString(),
                         creatorId = LoginPage.loggedInUser["responseData"]["userId"].ToString(),
                         gigName = GigName.Text,
                         description = GigDescription.Text,
                         pay = Double.Parse(GigPay.Text),
-                        deadline = GigDeadline.Date.ToString()
+                        deadline = GigDeadline.Text
 
                     }), Encoding.UTF8, "application/json"),
                     Method = HttpMethod.Delete,
@@ -108,6 +119,7 @@ namespace IPTMobileApp
                     Debug.WriteLine("Gig Deleted");
                     await DisplayAlert("Success", "Gig Deleted", "Ok");
                     await Navigation.PopModalAsync();
+                    await Navigation.PushAsync(new LoggedinTabbedPage_Client());
                 }
                 else
                 {

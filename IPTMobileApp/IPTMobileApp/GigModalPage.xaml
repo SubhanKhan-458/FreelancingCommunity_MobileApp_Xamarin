@@ -22,13 +22,9 @@
             
             <!--Project Deadline-->
                 <Label Grid.Row="7" Grid.Column="0" Text="Deadline" FontSize="17" TextColor="Black"/>
-                <DatePicker MinimumDate="01/01/2018" Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="4"
-                MaximumDate="12/31/2099"
-                Date="11/30/2022" 
-                x:Name="GigDeadline" 
-             />
-                
-            <Button Grid.Row="9" Grid.ColumnSpan="4" Text="Save" BackgroundColor="#fd684d" TextColor="White" CornerRadius="20" FontSize="15" FontAttributes="Bold" HorizontalOptions="FillAndExpand" Clicked="Button_Clicked"/>
+                <Entry x:Name="GigDeadline" Grid.Row="8" Grid.Column="0" Text="" HorizontalOptions="StartAndExpand" Grid.ColumnSpan="4" FontSize="17" TextColor="Black"/>
+
+                <Button Grid.Row="9" Grid.ColumnSpan="4" Text="Save" BackgroundColor="#fd684d" TextColor="White" CornerRadius="20" FontSize="15" FontAttributes="Bold" HorizontalOptions="FillAndExpand" Clicked="Button_Clicked"/>
             <Button Grid.Row="10" Grid.ColumnSpan="4" Text="Delete Gig" BackgroundColor="#fd684d" TextColor="White" CornerRadius="20" FontSize="15" FontAttributes="Bold" HorizontalOptions="FillAndExpand" Clicked="Button_Clicked_1"/>
             </Grid>
         </StackLayout>

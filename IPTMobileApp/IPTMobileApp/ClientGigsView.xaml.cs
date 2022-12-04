@@ -63,6 +63,7 @@ namespace IPTMobileApp
             var itemClicked = ((ListView)sender).SelectedItem;
             var index = ListDetails.IndexOf((Card)itemClicked);
             await Navigation.PushModalAsync(new GigModalPage(this.gigList[index]));
+            
         }
     }
 }
