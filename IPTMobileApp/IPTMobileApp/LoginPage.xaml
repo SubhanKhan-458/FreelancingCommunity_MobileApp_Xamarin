@@ -8,24 +8,24 @@
     </ContentPage.ToolbarItems>
     <StackLayout>
         <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto" RowSpacing="25" VerticalOptions="CenterAndExpand" Padding="30,0">
-        <Image Grid.Row="0" Source="Freelancer" HeightRequest="150" WidthRequest="150" Aspect="AspectFit"/>
-        <Label Grid.Row="1" FontAttributes="Bold" TextColor="Silver" FontSize="30" HorizontalTextAlignment="Center" Text="Changing the Way the&#10;World works for good"/>
-        <Label Grid.Row="2" Text="Username" TextColor="#a6a5a0" FontSize="15" FontAttributes="Bold"/>
-        <!--Username-->
-        <Entry x:Name="usernameEntry" Grid.Row="3" HeightRequest="40" BackgroundColor="#fdfbf6" Placeholder="Username" />
-        <Label Grid.Row="4" Text="Password" TextColor="#a6a5a0" FontSize="15" FontAttributes="Bold"/>
-        <!--Password-->
-        <Entry x:Name="passwordEntry" Grid.Row="5" HeightRequest="40" BackgroundColor="#fdfbf6" IsPassword="true" Placeholder="********"/>
-        <Label Grid.Row="6" Text="Forgot your password?" FontAttributes="Bold" FontSize="15" HorizontalOptions="End" />
-        <Button Grid.Row="7" BackgroundColor="#fd684d" Text="Log in" TextColor="White" CornerRadius="20" FontSize="15" FontAttributes="Bold" HorizontalOptions="FillAndExpand" Clicked="Button_Clicked"/>
-        <Label Grid.Row="8" FontAttributes="Bold" HorizontalTextAlignment="Center">
-            <Label.FormattedText>
-                <FormattedString>
-                    <Span Text="Don't have an account? "/>
-                    <Span Text="Register" TextColor="#fd684d"/>
-                </FormattedString>
-            </Label.FormattedText>
-        </Label>
-    </Grid>
+            <Image Grid.Row="0" Source="Freelancer" HeightRequest="150" WidthRequest="150" Aspect="AspectFit"/>
+            <Label Grid.Row="1" FontAttributes="Bold" TextColor="Silver" FontSize="30" HorizontalTextAlignment="Center" Text="Changing the Way the&#10;World works for good"/>
+            <Label Grid.Row="2" Text="Username" TextColor="#a6a5a0" FontSize="15" FontAttributes="Bold"/>
+            <!--Username-->
+            <Entry x:Name="usernameEntry" Grid.Row="3" HeightRequest="40" BackgroundColor="#fdfbf6" Placeholder="Username" />
+            <Label Grid.Row="4" Text="Password" TextColor="#a6a5a0" FontSize="15" FontAttributes="Bold"/>
+            <!--Password-->
+            <Entry x:Name="passwordEntry" Grid.Row="5" HeightRequest="40" BackgroundColor="#fdfbf6" IsPassword="true" Placeholder="********"/>
+            <Label Grid.Row="6" Text="Forgot your password?" FontAttributes="Bold" FontSize="15" HorizontalOptions="End" />
+            <Button Grid.Row="7" BackgroundColor="#fd684d" Text="Log in" TextColor="White" CornerRadius="20" FontSize="15" FontAttributes="Bold" HorizontalOptions="FillAndExpand" Clicked="Button_Clicked"/>
+            <Label Grid.Row="8" FontAttributes="Bold" HorizontalTextAlignment="Center">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Don't have an account? "/>
+                        <Span Text="Register" TextColor="#fd684d"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+        </Grid>
     </StackLayout>
 </ContentPage>
