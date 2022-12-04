@@ -71,5 +71,10 @@ namespace IPTMobileApp
                 }
             }
         }
+
+        private void ToolbarItem_Clicked(object sender, EventArgs e)
+        {
+
+        }
     }
 }

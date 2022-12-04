@@ -20,7 +20,7 @@
             </BoxView.Background>
         </BoxView>
         <Grid RowDefinitions="Auto,Auto,Auto" HeightRequest="280" Margin="30,30,30,100"
-              RowSpacing="40" VerticalOptions="End">
+              RowSpacing="40" VerticalOptions="EndAndExpand">
             <CarouselView x:Name="cvOnboarding" IndicatorView="LandingIndicator"
                           ItemsSource="{Binding Onboardings}" VerticalOptions="End">
                 <CarouselView.ItemTemplate>

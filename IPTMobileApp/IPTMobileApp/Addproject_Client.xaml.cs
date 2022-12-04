@@ -55,17 +55,17 @@ namespace IPTMobileApp
                     if (responseMessage.IsSuccessStatusCode)
                     {
                         Debug.WriteLine("Gig Inserted");
-                        await Navigation.PushModalAsync(new ClientGigsView());
+                        await Navigation.PushModalAsync(new LoggedinTabbedPage_Client());
                     }
                     else
                     {
                         Debug.WriteLine("Gig Not Inserted");
-                        await Navigation.PushModalAsync(new Addproject_Client());
+                        await Navigation.PushModalAsync(new LoggedinTabbedPage_Client());
                     }
                 }
                 catch
                 {
-                    await Navigation.PushModalAsync(new Addproject_Client());
+                    await Navigation.PushModalAsync(new Addproject_Client()); //Idhar bhi tabbedpage ana chaihe
                 }
             }
         }

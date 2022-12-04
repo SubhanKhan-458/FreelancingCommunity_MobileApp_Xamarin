@@ -135,7 +135,7 @@ namespace IPTMobileApp
                     if (responseMessage.IsSuccessStatusCode)
                     {
                         Debug.WriteLine("Offer Updated");
-                        await Navigation.PushModalAsync(new LoggedinPage_Client());
+                        await Navigation.PushModalAsync(new LoggedinTabbedPage_Client());
                         try
                         {
                             //Email Freelancer regarding offer acceptance
@@ -205,6 +205,11 @@ namespace IPTMobileApp
 
             Debug.WriteLine("Reject Button");
             Debug.WriteLine(index);
+        }
+
+        private void ToolbarItem_Clicked(object sender, EventArgs e)
+        {
+            //Navigation.PushAsync(new LoginPage());
         }
     }
 }
