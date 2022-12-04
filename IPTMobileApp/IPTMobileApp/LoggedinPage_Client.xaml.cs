@@ -8,6 +8,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Net.Http;
 using System.Reflection;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -29,6 +30,7 @@ namespace IPTMobileApp
             public string FreelancerEmail { get; set; }
             public string FreelancerName { get; set; }
             public string FreelancerDesc { get; set; }
+            //public int OfferId { get; set; }
         }
         public ObservableCollection<Card> ListDetails { get; set; }
         JToken offerList;
@@ -51,12 +53,11 @@ namespace IPTMobileApp
             var res = JObject.Parse(response);
             Debug.WriteLine(res["responseData"]);
             offerList = res["responseData"];
-            //Debug.WriteLine(offerList.ToString());
 
             ListDetails = new ObservableCollection<Card>();
             for (int i = 0; i < offerList.Count() ; i++) //Like this make list and access each..
             {
-                ListDetails.Add(new Card { Img1 = "freelancer", PName = "Medicare $olutions", PDescription = offerList[i]["gigDescription"].ToString(), PCost = offerList[i]["pay"].ToString(), PDeadline = offerList[i]["deadline"].ToString(), FreelancerName= offerList[i]["firstName"].ToString()  + " " + offerList[i]["lastName"].ToString(), FreelancerDesc= offerList[i]["freelancerDescription"].ToString(), FreelancerEmail= offerList[i]["email"].ToString() });
+                ListDetails.Add(new Card { Img1 = "freelancer", PName = offerList[i]["gigName"].ToString(), PDescription = offerList[i]["gigDescription"].ToString(), PCost = offerList[i]["pay"].ToString(), PDeadline = offerList[i]["deadline"].ToString(), FreelancerName= offerList[i]["firstName"].ToString()  + " " + offerList[i]["lastName"].ToString(), FreelancerDesc= offerList[i]["freelancerDescription"].ToString(), FreelancerEmail= offerList[i]["email"].ToString() });
             }
             BindingContext = this;
         } 
@@ -94,7 +95,7 @@ namespace IPTMobileApp
             catch
             {
                 Debug.WriteLine("Offer Delete Error");
-                await Navigation.PushAsync(new LoggedinPage_Client());
+                await Navigation.PushAsync(new LoginPage());
             }
         }
 
@@ -103,6 +104,7 @@ namespace IPTMobileApp
             var itemClicked = ((ListView)sender).SelectedItem;
             var index = ListDetails.IndexOf((Card)itemClicked);
 
+            Debug.WriteLine(index);
             Debug.WriteLine(ListDetails[index].PDescription);
             bool decision = await DisplayAlert("Gig Offer", ListDetails[index].FreelancerName, "Accept Offer", "Delete Offer");
 
@@ -133,7 +135,7 @@ namespace IPTMobileApp
                     if (responseMessage.IsSuccessStatusCode)
                     {
                         Debug.WriteLine("Offer Updated");
-                        await Navigation.PushAsync(new LoggedinPage_Client());
+                        await Navigation.PushModalAsync(new LoggedinPage_Client());
                         try
                         {
                             //Email Freelancer regarding offer acceptance
@@ -152,18 +154,18 @@ namespace IPTMobileApp
                             if (responseMessage.IsSuccessStatusCode)
                             {
                                 Debug.WriteLine("Email Sent");
-                                await Navigation.PushAsync(new LoggedinPage_Client());
+                                await DisplayAlert("Success", "Confirmation Email Sent to Freelancer", "OK");
                             }
                             else
                             {
                                 Debug.WriteLine("Error in Email");
-                                await Navigation.PushAsync(new LoggedinPage_Client());
+                                await DisplayAlert("Failure", "Confirmation Email Not Sent to Freelancer", "OK");
                             }
                         }
                         catch
                         {
                             Debug.WriteLine("Error in Email");
-                            await Navigation.PushAsync(new LoggedinPage_Client());
+                            await Navigation.PushAsync(new LoginPage());
                         }
                     }
                     else

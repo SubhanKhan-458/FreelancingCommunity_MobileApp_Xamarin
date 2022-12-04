@@ -10,10 +10,10 @@
                 <Label Grid.Row="1" Text="Contact skilled freelancers within minutes. View profiles, ratings, portfolios and chat with them. Pay the freelancer only when you are 100% satisfied with their work." TextColor="#a6a5a0" FontSize="15"/>
 
                 <Label Grid.Row="2" Text="Name" TextColor="#a6a5a0" FontSize="15" />
-                <Entry x:Name="GigName" Grid.Row="3" HeightRequest="40" BackgroundColor="#fdfbf6" Placeholder="P.name" Text=""/>
+                <Entry x:Name="GigName" Grid.Row="3" HeightRequest="40" BackgroundColor="#fdfbf6" Placeholder="Gig Name" Text=""/>
 
                 <Label Grid.Row="4" Text="Description" TextColor="#a6a5a0" FontSize="15" />
-                <Entry x:Name="Description" Grid.Row="5" HeightRequest="40" BackgroundColor="#fdfbf6" Placeholder="P.desc" Text="" />
+                <Entry x:Name="Description" Grid.Row="5" HeightRequest="40" BackgroundColor="#fdfbf6" Placeholder="Gig Description" Text="" />
 
                 <Label Grid.Row="6" Text="Pay" TextColor="#a6a5a0" FontSize="15" />
                 <Entry x:Name="Pay" Grid.Row="7" HeightRequest="40" BackgroundColor="#fdfbf6" Text=""/>

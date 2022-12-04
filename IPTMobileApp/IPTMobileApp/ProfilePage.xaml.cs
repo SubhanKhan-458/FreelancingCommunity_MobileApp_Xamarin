@@ -81,12 +81,11 @@ namespace IPTMobileApp
                     if (responseMessage.IsSuccessStatusCode)
                     {
                         Debug.WriteLine("Record Updated");
-                        await Navigation.PushAsync(new ProfilePage());
+                        await DisplayAlert("Success", "Record Updated", "Ok");
                     }
                     else
                     {
                         Debug.WriteLine("Record Not Updated");
-                        await Navigation.PushAsync(new LoginPage());
                     }
                 }
                 catch

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IPTMobileApp.GigModalPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <BoxView HeightRequest="90" WidthRequest="6"></BoxView>
+            <Image Source="freelancer" HorizontalOptions="Center"/>
+            <!--Project Name-->
+            <Grid Grid.Row="7" Grid.Column="2">
+            <!--Project Name-->
+            <Label Grid.Row="1" Grid.Column="0" Text="Gig Name: " HorizontalOptions="Start" FontSize="17" TextColor="Black"/>
+                <Entry x:Name="GigName" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="4" Text="" FontSize="17" TextColor="Black" HorizontalOptions="StartAndExpand"/>
+            
+            <!--Project Description-->
+            <Label Grid.Row="3" Grid.Column="0" Text="Description: " HorizontalOptions="Start" FontSize="17" TextColor="Black"/>
+                <Entry x:Name="GigDescription" Grid.Row="4" Grid.Column="0" Text="" HorizontalOptions="StartAndExpand" Grid.ColumnSpan="4" HeightRequest="40" FontSize="17" TextColor="Black"/>
+            
+            <!--Project Pay-->
+            <Label Grid.Row="5" Grid.Column="0" Text="Pay: " HorizontalOptions="Start" FontSize="17" TextColor="Black"/>
+                <Entry x:Name="GigPay" Grid.Row="6" Grid.Column="0" Text="" HorizontalOptions="StartAndExpand" Grid.ColumnSpan="4" FontSize="17" TextColor="Black"/>
+            
+            <!--Project Deadline-->
+                <Label Grid.Row="7" Grid.Column="0" Text="Deadline" FontSize="17" TextColor="Black"/>
+                <DatePicker MinimumDate="01/01/2018" Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="4"
+                MaximumDate="12/31/2099"
+                Date="11/30/2022" 
+                x:Name="GigDeadline" 
+             />
+                
+            <Button Grid.Row="9" Grid.ColumnSpan="4" Text="Save" BackgroundColor="#fd684d" TextColor="White" CornerRadius="20" FontSize="15" FontAttributes="Bold" HorizontalOptions="FillAndExpand" Clicked="Button_Clicked"/>
+            <Button Grid.Row="10" Grid.ColumnSpan="4" Text="Delete Gig" BackgroundColor="#fd684d" TextColor="White" CornerRadius="20" FontSize="15" FontAttributes="Bold" HorizontalOptions="FillAndExpand" Clicked="Button_Clicked_1"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
