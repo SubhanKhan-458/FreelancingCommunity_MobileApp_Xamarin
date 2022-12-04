@@ -10,36 +10,36 @@
                     <DataTemplate>
                         <ViewCell>
                             <Grid Padding="4" Margin="4">
-                                <Frame IsClippedToBounds="True" Grid.Row="0" HasShadow="True" Padding="0" BackgroundColor="White">
+                                <Frame IsClippedToBounds="True" Grid.Row="0" HasShadow="True" Padding="0" BackgroundColor="LightGray" BorderColor="Black">
                                     <StackLayout>
-                                        <BoxView HeightRequest="90" WidthRequest="6"></BoxView>
+                                        <!--<BoxView HeightRequest="90" WidthRequest="6"></BoxView>-->
                                         <Image Source="{Binding Img1}" HorizontalOptions="Center"/>
                                         <!--Project Name-->
-                                        <Grid Grid.Row="4" Grid.Column="2">
+                                        <Grid Grid.Row="7" Grid.Column="2">
                                             <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Text="{Binding PName}" HorizontalOptions="Center" FontAttributes="Bold"/>
 
                                             <!--Project Description-->
-                                            <Label Grid.Row="1" Grid.Column="0" Text="Gig Description: " HorizontalOptions="Start" FontSize="17" TextColor="Black"/>
-                                            <Label Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="1" Text="{Binding PDescription}" HorizontalOptions="End" FontSize="17" TextColor="Black"/>
+                                            <Label Grid.Row="1" Grid.Column="0" Text="Gig Description: " Margin="5,0,0,0" HorizontalOptions="Start" FontSize="17" TextColor="Black" FontAttributes="Bold"/>
+                                            <Label Grid.Row="1" Grid.Column="1" Text="{Binding PDescription}" HorizontalOptions="StartAndExpand" FontSize="17" TextColor="Black"/>
 
                                             <!--Project Cost-->
-                                            <Label Grid.Row="2" Grid.Column="0" Text="Pay " HorizontalOptions="Start" FontSize="17" TextColor="Black"/>
+                                            <Label Grid.Row="2" Grid.Column="0" Text="Pay " Margin="5,0,0,0" HorizontalOptions="Start" FontSize="17" TextColor="Black" FontAttributes="Bold"/>
                                             <Label Grid.Row="2" Grid.Column="1" Text="{Binding PCost}" HorizontalOptions="StartAndExpand" FontSize="17" TextColor="Black"/>
 
                                             <!--Project Deadline-->
-                                            <Label Grid.Row="3" Grid.Column="0" Text="Deadline: " HorizontalOptions="Start" FontSize="17" TextColor="Black"/>
+                                            <Label Grid.Row="3" Grid.Column="0" Text="Deadline: " Margin="5,0,0,0" HorizontalOptions="Start" FontSize="17" TextColor="Black" FontAttributes="Bold"/>
                                             <Label Grid.Row="3" Grid.Column="1" Text="{Binding PDeadline}" HorizontalOptions="StartAndExpand" FontSize="17" TextColor="Black"/>
 
                                             <!--Freelancer Name-->
-                                            <Label Grid.Row="4" Grid.Column="0" Text="Freelancer Name: " HorizontalOptions="Start" FontSize="17" TextColor="Black"/>
+                                            <Label Grid.Row="4" Grid.Column="0" Text="Freelancer Name: " Margin="5,0,0,0" HorizontalOptions="Start" FontSize="17" TextColor="Black" FontAttributes="Bold"/>
                                             <Label Grid.Row="4" Grid.Column="1" Text="{Binding FreelancerName}" HorizontalOptions="StartAndExpand" FontSize="17" TextColor="Black"/>
 
-                                            <!--Freelancer Name-->
-                                            <Label Grid.Row="5" Grid.Column="0" Text="Freelancer Description: " HorizontalOptions="Start" FontSize="17" TextColor="Black"/>
+                                            <!--Freelancer Description-->
+                                            <Label Grid.Row="5" Grid.Column="0" Text="Freelancer Description: " Margin="5,0,0,0" HorizontalOptions="Start" FontSize="17" TextColor="Black" FontAttributes="Bold"/>
                                             <Label Grid.Row="5" Grid.Column="1" Text="{Binding FreelancerDesc}" HorizontalOptions="StartAndExpand" FontSize="17" TextColor="Black"/>
 
-                                            <!--Freelancer Name-->
-                                            <Label Grid.Row="6" Grid.Column="0" Text="Freelancer Email: " HorizontalOptions="Start" FontSize="17" TextColor="Black"/>
+                                            <!--Freelancer Email-->
+                                            <Label Grid.Row="6" Grid.Column="0" Text="Freelancer Email: " Margin="5,0,0,0" HorizontalOptions="Start" FontSize="17" TextColor="Black" FontAttributes="Bold"/>
                                             <Label Grid.Row="6" Grid.Column="1" Text="{Binding FreelancerEmail}" HorizontalOptions="StartAndExpand" FontSize="17" TextColor="Black"/>
 
                                             <!--
@@ -47,8 +47,10 @@
                                             <Button Grid.Row="7" Grid.Column="1" Text="Reject" HorizontalOptions="Start" FontSize="17" TextColor="Black" Clicked="Reject_Clicked"/>
                                             -->
                                         </Grid>
+                                        
                                     </StackLayout>
                                 </Frame>
+                                
                             </Grid>
                         </ViewCell>
                     </DataTemplate>

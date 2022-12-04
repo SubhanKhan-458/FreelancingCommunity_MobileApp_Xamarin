@@ -100,17 +100,23 @@ namespace IPTMobileApp
                     if (responseMessage.IsSuccessStatusCode)
                     {
                         Debug.WriteLine("Offer Inserted");
+
                         await DisplayAlert("Success", "Offer Posted", "OK");
+
                     }
                     else
                     {
                         Debug.WriteLine("Offer Not Inserted");
+
                         await DisplayAlert("Failure", "Offer Not Posted", "OK");
+
                     }
                 }
                 catch
                 {
+
                     await Navigation.PushAsync(new LoginPage());
+
                 }
             }
 

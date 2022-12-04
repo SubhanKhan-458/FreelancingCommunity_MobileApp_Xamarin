@@ -63,6 +63,7 @@ namespace IPTMobileApp
                         {
                             await Navigation.PushModalAsync(new LoggedinTabbedPage_Client());
                         }
+
                     }
                 }
                 catch
