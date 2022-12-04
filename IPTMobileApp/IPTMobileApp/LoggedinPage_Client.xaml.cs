@@ -129,7 +129,7 @@ namespace IPTMobileApp
                     var client = new HttpClient();
                     client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", "cd53344c9a0e4abeb55ea6322888d4d6");
                     HttpResponseMessage responseMessage = await client.PutAsync("https://khudmadadbackend20221127230404.azurewebsites.net/api/offer/updatestatus", data);
-                   
+                    HttpResponseMessage responseMessage1 = await client.DeleteAsync("https://khudmadadbackend20221127230404.azurewebsites.net/api/offer/delete/" + offerList[index]["gigId"].ToString());
                     //Debug.WriteLine(responseMessage);
 
                     if (responseMessage.IsSuccessStatusCode)

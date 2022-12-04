@@ -42,7 +42,7 @@ namespace IPTMobileApp
         {
             var client = new HttpClient();
             client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", "cd53344c9a0e4abeb55ea6322888d4d6");
-            HttpResponseMessage httpResponse = await client.GetAsync("https://khudmadadbackend20221127230404.azurewebsites.net/api/gig");
+            HttpResponseMessage httpResponse = await client.GetAsync("https://khudmadadbackend20221127230404.azurewebsites.net/api/gig/unaccepted");
             Debug.WriteLine(httpResponse);
             string response = await httpResponse.Content.ReadAsStringAsync();
             var res = JObject.Parse(response);
