@@ -3,23 +3,23 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="IPTMobileApp.Addproject_Client">
     <ScrollView>
-        <StackLayout>
+        <StackLayout BackgroundColor="White">
             <Image Source="Freelancer" Aspect="AspectFill" HeightRequest="200"/>
             <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto" RowSpacing="25" HorizontalOptions="Start" VerticalOptions="CenterAndExpand" Padding="30,0">
                 <Label Grid.Row="0" Text="Tell us what you need done" TextColor="#a6a5a0" FontSize="20" FontAttributes="Bold"/>
                 <Label Grid.Row="1" Text="Contact skilled freelancers within minutes. View profiles, ratings, portfolios and chat with them. Pay the freelancer only when you are 100% satisfied with their work." TextColor="#a6a5a0" FontSize="15"/>
 
                 <Label Grid.Row="2" Text="Name" TextColor="#a6a5a0" FontSize="15" />
-                <Entry x:Name="GigName" Grid.Row="3" HeightRequest="40" BackgroundColor="#fdfbf6" Placeholder="Gig Name" Text=""/>
+                <Entry x:Name="GigName" Grid.Row="3" HeightRequest="40" BackgroundColor="#fdfbf6" Placeholder="Gig Name" Text="" TextColor="Black"/>
 
                 <Label Grid.Row="4" Text="Description" TextColor="#a6a5a0" FontSize="15" />
-                <Entry x:Name="Description" Grid.Row="5" HeightRequest="40" BackgroundColor="#fdfbf6" Placeholder="Gig Description" Text="" />
+                <Entry x:Name="Description" Grid.Row="5" HeightRequest="40" BackgroundColor="#fdfbf6" Placeholder="Gig Description" Text="" TextColor="Black"/>
 
                 <Label Grid.Row="6" Text="Pay" TextColor="#a6a5a0" FontSize="15" />
-                <Entry x:Name="Pay" Grid.Row="7" HeightRequest="40" BackgroundColor="#fdfbf6" Text=""/>
+                <Entry x:Name="Pay" Grid.Row="7" HeightRequest="40" BackgroundColor="#fdfbf6" Text="" TextColor="Black"/>
 
                 <Label Grid.Row="8" Text="Deadline" TextColor="#a6a5a0" FontSize="15" />
-                <DatePicker MinimumDate="01/01/2018" Grid.Row="9"
+                <DatePicker MinimumDate="01/01/2018" Grid.Row="9" TextColor="Black"
                 MaximumDate="12/31/2099"
                 Date="11/30/2022" 
                 x:Name="Deadline" 

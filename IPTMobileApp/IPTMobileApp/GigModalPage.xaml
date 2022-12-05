@@ -3,26 +3,26 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="IPTMobileApp.GigModalPage">
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout BackgroundColor="White">
             <BoxView HeightRequest="90" WidthRequest="6"></BoxView>
             <Image Source="freelancer" HorizontalOptions="Center"/>
             <!--Project Name-->
             <Grid Grid.Row="7" Grid.Column="2">
             <!--Project Name-->
-                <Label Grid.Row="1" Grid.Column="0" Text="Gig Name: " HorizontalOptions="Start" FontSize="17" TextColor="Black" Grid.ColumnSpan="2"/>
-                <Entry x:Name="GigName" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Text="" FontSize="17" TextColor="Black" />
+                <Label Grid.Row="1" Grid.Column="0" Text="Gig Name: " HorizontalOptions="Start" FontSize="17" TextColor="DarkGray" Grid.ColumnSpan="2" />
+                <Entry x:Name="GigName" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Text="" FontSize="17" TextColor="Black" BackgroundColor="White"/>
             
             <!--Project Description-->
-                <Label Grid.Row="3" Grid.Column="0" Text="Description: " HorizontalOptions="Start" FontSize="17" TextColor="Black" Grid.ColumnSpan="2"/>
-                <Entry x:Name="GigDescription" Grid.Row="4" Grid.Column="0" Text="" Grid.ColumnSpan="2" HeightRequest="40" FontSize="17" TextColor="Black"/>
+                <Label Grid.Row="3" Grid.Column="0" Text="Description: " HorizontalOptions="Start" FontSize="17" TextColor="DarkGray" Grid.ColumnSpan="2"/>
+                <Entry x:Name="GigDescription" Grid.Row="4" Grid.Column="0" Text="" Grid.ColumnSpan="2" HeightRequest="40" FontSize="17" TextColor="Black" BackgroundColor="White"/>
             
             <!--Project Pay-->
-                <Label Grid.Row="5" Grid.Column="0" Text="Pay: " HorizontalOptions="Start" FontSize="17" TextColor="Black" Grid.ColumnSpan="2"/>
-            <Entry x:Name="GigPay" Placeholder="Gig Pay" Grid.Row="6" Grid.Column="0" Text="" Grid.ColumnSpan="2" FontSize="17" TextColor="Black"/>
+                <Label Grid.Row="5" Grid.Column="0" Text="Pay: " HorizontalOptions="Start" FontSize="17" TextColor="DarkGray" Grid.ColumnSpan="2"/>
+                <Entry x:Name="GigPay" Placeholder="Gig Pay" Grid.Row="6" Grid.Column="0" Text="" Grid.ColumnSpan="2" FontSize="17" TextColor="Black" BackgroundColor="White"/>
             
             <!--Project Deadline-->
-                <Label Grid.Row="7" Grid.Column="0" Text="Deadline" FontSize="17" TextColor="Black" Grid.ColumnSpan="2"/>
-                <Entry x:Name="GigDeadline" Grid.Row="8" Grid.Column="0" Text="" HorizontalOptions="StartAndExpand" Grid.ColumnSpan="2" FontSize="17" TextColor="Black"/>
+                <Label Grid.Row="7" Grid.Column="0" Text="Deadline" FontSize="17" TextColor="DarkGray" Grid.ColumnSpan="2"/>
+                <Entry x:Name="GigDeadline" Grid.Row="8" Grid.Column="0" Text="" HorizontalOptions="StartAndExpand" Grid.ColumnSpan="2" FontSize="17" TextColor="Black" BackgroundColor="White"/>
 
                 <Button Grid.Row="9" Grid.ColumnSpan="2" Text="Save" BackgroundColor="#fd684d" TextColor="White" CornerRadius="20" FontSize="15" FontAttributes="Bold" HorizontalOptions="FillAndExpand" Clicked="Button_Clicked"/>
             <Button Grid.Row="10" Grid.ColumnSpan="2" Text="Delete Gig" BackgroundColor="#fd684d" TextColor="White" CornerRadius="20" FontSize="15" FontAttributes="Bold" HorizontalOptions="FillAndExpand" Clicked="Button_Clicked_1"/>

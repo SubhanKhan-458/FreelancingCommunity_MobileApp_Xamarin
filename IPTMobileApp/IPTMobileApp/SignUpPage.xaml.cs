@@ -87,6 +87,7 @@ namespace IPTMobileApp
                     if (responseMessage.IsSuccessStatusCode)
                     {
                         Debug.WriteLine("Record Inserted");
+                        await DisplayAlert("Success", "SignUp Successful", "OK");
                         await Navigation.PushAsync(new LoginPage());
                     }
                     else
