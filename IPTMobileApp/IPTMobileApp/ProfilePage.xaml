@@ -2,6 +2,9 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="IPTMobileApp.ProfilePage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="LogOut" Clicked="ToolbarItem_Clicked" />
+    </ContentPage.ToolbarItems>
     <ScrollView>
         <StackLayout>
             <Image Source="person" Aspect="AspectFill" HeightRequest="530"/>

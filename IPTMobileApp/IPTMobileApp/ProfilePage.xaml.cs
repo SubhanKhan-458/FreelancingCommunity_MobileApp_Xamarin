@@ -92,5 +92,10 @@ namespace IPTMobileApp
             }
 
         }
+
+        private void ToolbarItem_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new LoginPage());
+        }
     }
 }
