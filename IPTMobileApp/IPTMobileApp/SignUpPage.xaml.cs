@@ -22,8 +22,12 @@ namespace IPTMobileApp
 
         private async void Button_Clicked(object sender, EventArgs e)
         {
-            //Access with these names: Fname.Text, Lname.Text, Email.Text, Password.Text, CPassword.Text, Role.Text, CPhone_no.Text
-            
+            Debug.WriteLine(Role.SelectedItem.ToString());
+            Debug.WriteLine(CPhone_no.Text);
+            Debug.WriteLine(Username.Text);
+            Debug.WriteLine(Password.Text);
+            Debug.WriteLine(Email.Text);
+
             if (Fname.Text == "")
                 Fname.BackgroundColor = Color.LightPink;
             else if (Lname.Text == "")
@@ -57,8 +61,8 @@ namespace IPTMobileApp
                             email = Email.Text,
                             username = Username.Text,
                             password = Password.Text,
-                            dob = "09/03/2002",
                             phoneNumber = CPhone_no.Text,
+                            dob = "09/03/02",
                             roleId = 1
                         }), Encoding.UTF8, "application/json");
                     }
@@ -71,14 +75,14 @@ namespace IPTMobileApp
                             email = Email.Text,
                             username = Username.Text,
                             password = Password.Text,
-                            dob = "09/03/2002",
                             phoneNumber = CPhone_no.Text,
+                            dob = "09/03/02",
                             roleId = 2
                         }), Encoding.UTF8, "application/json");
                     }
                     var client = new HttpClient();
-                    client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", "cd53344c9a0e4abeb55ea6322888d4d6");
-                    HttpResponseMessage responseMessage = await client.PostAsync("https://khudmadadbackendapi.azure-api.net/api/users/Create", data);
+                    //client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", "cd53344c9a0e4abeb55ea6322888d4d6");
+                    HttpResponseMessage responseMessage = await client.PostAsync(App.BaseURL+ "api/users/Create",data);
                     Debug.WriteLine(responseMessage);
                     if (responseMessage.IsSuccessStatusCode)
                     {

@@ -72,8 +72,8 @@ namespace IPTMobileApp
                     Debug.WriteLine(data);
 
                     var client = new HttpClient();
-                    client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", "cd53344c9a0e4abeb55ea6322888d4d6");
-                    HttpResponseMessage responseMessage = await client.PutAsync("https://khudmadadbackendapi.azure-api.net/api/Users/update", data);
+                    //client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", "cd53344c9a0e4abeb55ea6322888d4d6");
+                    HttpResponseMessage responseMessage = await client.PutAsync(App.BaseURL + "api/Users/update", data);
                     Debug.WriteLine(responseMessage);
                     if (responseMessage.IsSuccessStatusCode)
                     {

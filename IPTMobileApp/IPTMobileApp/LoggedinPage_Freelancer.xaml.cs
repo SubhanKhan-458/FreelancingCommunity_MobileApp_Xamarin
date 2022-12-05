@@ -41,8 +41,8 @@ namespace IPTMobileApp
         private async void PopulateGigs()
         {
             var client = new HttpClient();
-            client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", "cd53344c9a0e4abeb55ea6322888d4d6");
-            HttpResponseMessage httpResponse = await client.GetAsync("https://khudmadadbackend20221127230404.azurewebsites.net/api/gig/unaccepted");
+            //client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", "cd53344c9a0e4abeb55ea6322888d4d6");
+            HttpResponseMessage httpResponse = await client.GetAsync(App.BaseURL + "api/gig/unaccepted");
             Debug.WriteLine(httpResponse);
             string response = await httpResponse.Content.ReadAsStringAsync();
             var res = JObject.Parse(response);
@@ -94,8 +94,8 @@ namespace IPTMobileApp
                     Debug.WriteLine(data);
 
                     var client = new HttpClient();
-                    client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", "cd53344c9a0e4abeb55ea6322888d4d6");
-                    HttpResponseMessage responseMessage = await client.PostAsync("https://khudmadadbackend20221127230404.azurewebsites.net/api/offer/create", data);
+                    //client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", "cd53344c9a0e4abeb55ea6322888d4d6");
+                    HttpResponseMessage responseMessage = await client.PostAsync(App.BaseURL + "api/offer/create", data);
                     Debug.WriteLine(responseMessage);
                     if (responseMessage.IsSuccessStatusCode)
                     {

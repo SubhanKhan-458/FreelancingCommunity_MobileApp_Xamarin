@@ -41,8 +41,8 @@ namespace IPTMobileApp
         private async void PopulateGigs()
         {
             var client = new HttpClient();
-            client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", "cd53344c9a0e4abeb55ea6322888d4d6");
-            HttpResponseMessage httpResponse = await client.GetAsync("https://khudmadadbackend20221127230404.azurewebsites.net/api/gig/creatorId/" + user["responseData"]["userId"].ToString());
+            //client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", "cd53344c9a0e4abeb55ea6322888d4d6");
+            HttpResponseMessage httpResponse = await client.GetAsync(App.BaseURL + "api/gig/creatorId/" + user["responseData"]["userId"].ToString());
             Debug.WriteLine(httpResponse);
             string response = await httpResponse.Content.ReadAsStringAsync();
             var res = JObject.Parse(response);
