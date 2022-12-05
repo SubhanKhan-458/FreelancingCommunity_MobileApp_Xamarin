@@ -11,6 +11,28 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Assets\Images\about.png" />
+    <None Remove="Assets\Images\Addproject.png" />
+    <None Remove="Assets\Images\Front.webp" />
+    <None Remove="Assets\Images\homepic.png" />
+    <None Remove="Assets\Images\mail.png" />
+    <None Remove="Assets\Images\person.jfif" />
+    <None Remove="Assets\Images\phone.png" />
+    <None Remove="Assets\Images\profilepic.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\Images\about.png" />
+    <EmbeddedResource Include="Assets\Images\Addproject.png" />
+    <EmbeddedResource Include="Assets\Images\Front.webp" />
+    <EmbeddedResource Include="Assets\Images\homepic.png" />
+    <EmbeddedResource Include="Assets\Images\mail.png" />
+    <EmbeddedResource Include="Assets\Images\person.jfif" />
+    <EmbeddedResource Include="Assets\Images\phone.png" />
+    <EmbeddedResource Include="Assets\Images\profilepic.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
     <PackageReference Include="System.Linq" Version="4.3.0" />
     <PackageReference Include="Xamarin.Essentials" Version="1.7.3" />

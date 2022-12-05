@@ -33,6 +33,15 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AndroidLinkMode>None</AndroidLinkMode>
+    <AotAssemblies>false</AotAssemblies>
+    <EnableLLVM>false</EnableLLVM>
+    <AndroidEnableProfiledAot>false</AndroidEnableProfiledAot>
+    <BundleAssemblies>false</BundleAssemblies>
+    <MandroidI18n />
+    <AndroidHttpClientHandlerType>Xamarin.Android.Net.AndroidClientHandler</AndroidHttpClientHandlerType>
+    <AndroidSupportedAbis />
+    <AndroidTlsProvider>
+    </AndroidTlsProvider>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -92,34 +101,34 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\homepic.png" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\IPTMobileApp\IPTMobileApp.csproj">
       <Project>{9BF31632-1A35-4940-956F-3DAAE06D7A2C}</Project>
       <Name>IPTMobileApp</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <AndroidResource Include="Resources\drawable\about.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Addproject.png" />
+  </ItemGroup>
+  <ItemGroup>
     <AndroidResource Include="Resources\drawable\freelancer.jfif" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\profilepic.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\about.png" />
+    <AndroidResource Include="Resources\drawable\homepic.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\mail.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\phone.png" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable\person.jfif" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\Addproject.png" />
+    <AndroidResource Include="Resources\drawable\phone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\profilepic.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
