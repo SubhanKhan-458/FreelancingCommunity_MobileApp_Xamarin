@@ -6,7 +6,7 @@
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="LogOut" Clicked="ToolbarItem_Clicked" />
     </ContentPage.ToolbarItems>
-    <StackLayout>
+    <StackLayout BackgroundColor="White">
         <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto" RowSpacing="25" VerticalOptions="CenterAndExpand" Padding="30,0">
             <Image Grid.Row="0" Source="Freelancer" HeightRequest="150" WidthRequest="150" Aspect="AspectFit"/>
             <Label Grid.Row="1" FontAttributes="Bold" TextColor="Silver" FontSize="30" HorizontalTextAlignment="Center" Text="Changing the Way the&#10;World works for good"/>
