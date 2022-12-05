@@ -6,30 +6,30 @@
         <ToolbarItem Text="LogOut" Clicked="ToolbarItem_Clicked" />
     </ContentPage.ToolbarItems>
     <ScrollView>
-        <StackLayout>
+        <StackLayout BackgroundColor="White">
             <Image Source="person" Aspect="AspectFill" HeightRequest="530"/>
             <Frame HasShadow="False" CornerRadius="40" Margin="0,-50,0,0" VerticalOptions="FillAndExpand">
                 <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto" ColumnDefinitions="*,*,*">
-                    <Label Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Text="First Name" FontSize="15"/>
-                    <Entry x:Name="Fname" Text="{Binding fname}" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" FontSize="15" FontAttributes="Bold"/>
+                    <Label Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Text="First Name" FontSize="15" TextColor="DarkGray"/>
+                    <Entry x:Name="Fname" Text="{Binding fname}" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" FontSize="15" FontAttributes="Bold" BackgroundColor="White" TextColor="Black"/>
 
-                    <Label Grid.Row="1" Grid.Column="4" Grid.ColumnSpan="3" Text="Last Name" FontSize="15"/>
-                    <Entry x:Name="Lname" Text="{Binding lname}" Grid.Row="2" Grid.Column="4" Grid.ColumnSpan="3" FontSize="15" FontAttributes="Bold"/>
+                    <Label Grid.Row="1" Grid.Column="4" Grid.ColumnSpan="3" Text="Last Name" FontSize="15" TextColor="DarkGray"/>
+                    <Entry x:Name="Lname" Text="{Binding lname}" Grid.Row="2" Grid.Column="4" Grid.ColumnSpan="3" FontSize="15" FontAttributes="Bold" BackgroundColor="White" TextColor="Black"/>
 
-                    <Label Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3" Text="Email" FontSize="15" />
-                    <Entry x:Name="Email" Text="{Binding email}" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="7" FontSize="15" FontAttributes="Bold"/>
+                    <Label Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3" Text="Email" FontSize="15" TextColor="DarkGray"/>
+                    <Entry x:Name="Email" Text="{Binding email}" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="7" FontSize="15" FontAttributes="Bold" BackgroundColor="White" TextColor="Black"/>
 
-                    <Label Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="3" Text="Username" FontSize="15" />
-                    <Entry x:Name="Username" Text="{Binding username}" Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="7" FontSize="15" FontAttributes="Bold" IsReadOnly="True"/>
+                    <Label Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="3" Text="Username" FontSize="15" TextColor="DarkGray"/>
+                    <Entry x:Name="Username" Text="{Binding username}" Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="7" FontSize="15" FontAttributes="Bold" BackgroundColor="White" IsReadOnly="True" TextColor="Black"/>
 
-                    <Label Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="3" Text="Password" FontSize="15" />
-                    <Entry x:Name="Password" Text="{Binding password}" Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="7" FontSize="15" FontAttributes="Bold" IsPassword="True" IsReadOnly="True"/>
+                    <Label Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="3" Text="Password" FontSize="15" TextColor="DarkGray"/>
+                    <Entry x:Name="Password" Text="{Binding password}" Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="7" FontSize="15" FontAttributes="Bold"  BackgroundColor="White" IsPassword="True" IsReadOnly="True" TextColor="Black"/>
 
-                    <Label Grid.Row="10" Grid.Column="0" Grid.ColumnSpan="3" Text="Phone Number" FontSize="15"/>
-                    <Entry x:Name="PhoneNo" Text="{Binding phoneNo}" Grid.Row="11" Grid.Column="0" Grid.ColumnSpan="7" FontSize="15" FontAttributes="Bold"/>
+                    <Label Grid.Row="10" Grid.Column="0" Grid.ColumnSpan="3" Text="Phone Number" FontSize="15" TextColor="DarkGray"/>
+                    <Entry x:Name="PhoneNo" Text="{Binding phoneNo}" Grid.Row="11" Grid.Column="0" Grid.ColumnSpan="7" FontSize="15" FontAttributes="Bold"  BackgroundColor="White" TextColor="Black"/>
 
-                    <Label Grid.Row="12" Grid.Column="0" Grid.ColumnSpan="2" Text="Description" FontSize="15"/>
-                    <Entry x:Name="Description" Text="{Binding desc}" Grid.Row="13" Grid.Column="0" Grid.ColumnSpan="7" FontSize="15" FontAttributes="Bold"/>
+                    <Label Grid.Row="12" Grid.Column="0" Grid.ColumnSpan="2" Text="Description" FontSize="15" TextColor="DarkGray"/>
+                    <Entry x:Name="Description" Text="{Binding desc}" Grid.Row="13" Grid.Column="0" Grid.ColumnSpan="7" FontSize="15" FontAttributes="Bold" BackgroundColor="White" TextColor="Black"/>
 
                     <Button Grid.Row="14" Grid.Column="0" Grid.ColumnSpan="7" BackgroundColor="#fd684d" Text="Update Info" TextColor="White" CornerRadius="20" FontSize="15" FontAttributes="Bold" HorizontalOptions="FillAndExpand" Clicked="Button_Clicked"/>
                 </Grid>
