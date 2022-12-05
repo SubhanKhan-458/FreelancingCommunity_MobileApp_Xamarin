@@ -63,15 +63,14 @@ namespace IPTMobileApp
                     Debug.WriteLine(data);
 
                     var client = new HttpClient();
-                    client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", "cd53344c9a0e4abeb55ea6322888d4d6");
-                    HttpResponseMessage responseMessage = await client.PutAsync("https://khudmadadbackendapi.azure-api.net/api/gig/update", data);
+                    //client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", "cd53344c9a0e4abeb55ea6322888d4d6");
+                    HttpResponseMessage responseMessage = await client.PutAsync(App.BaseURL + "api/gig/update", data);
                     Debug.WriteLine(responseMessage);
                     if (responseMessage.IsSuccessStatusCode)
                     {
                         Debug.WriteLine("Gig Updated");
                         await DisplayAlert("Success", "Gig Updated", "Ok");
                         await Navigation.PopModalAsync();
-                        await Navigation.PushAsync(new LoggedinTabbedPage_Client());
                         
                     }
                     else
@@ -97,7 +96,7 @@ namespace IPTMobileApp
             {
                 Debug.WriteLine(GigDeadline.GetType().ToString());
                 var client = new HttpClient();
-                client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", "cd53344c9a0e4abeb55ea6322888d4d6");
+                //client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", "cd53344c9a0e4abeb55ea6322888d4d6");
                 HttpRequestMessage request = new HttpRequestMessage
                 {
                     Content = new StringContent(JsonConvert.SerializeObject(new
@@ -112,7 +111,7 @@ namespace IPTMobileApp
 
                     }), Encoding.UTF8, "application/json"),
                     Method = HttpMethod.Delete,
-                    RequestUri = new Uri("https://khudmadadbackendapi.azure-api.net/api/gig/delete")
+                    RequestUri = new Uri(App.BaseURL + "api/gig/delete")
                 };
                 HttpResponseMessage responseMessage = await client.SendAsync(request);
 
@@ -121,7 +120,6 @@ namespace IPTMobileApp
                     Debug.WriteLine("Gig Deleted");
                     await DisplayAlert("Success", "Gig Deleted", "Ok");
                     await Navigation.PopModalAsync();
-                    await Navigation.PushAsync(new LoggedinTabbedPage_Client());
                 }
                 else
                 {

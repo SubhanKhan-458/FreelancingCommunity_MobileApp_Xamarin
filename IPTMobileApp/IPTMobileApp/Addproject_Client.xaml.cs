@@ -47,13 +47,13 @@ namespace IPTMobileApp
                     Debug.WriteLine(data);
 
                     var client = new HttpClient();
-                    client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", "cd53344c9a0e4abeb55ea6322888d4d6");
-                    HttpResponseMessage responseMessage = await client.PostAsync("https://khudmadadbackendapi.azure-api.net/api/gig/Create", data);
+                    //client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", "cd53344c9a0e4abeb55ea6322888d4d6");
+                    HttpResponseMessage responseMessage = await client.PostAsync(App.BaseURL + "api/gig/Create", data);
                     Debug.WriteLine(responseMessage);
                     if (responseMessage.IsSuccessStatusCode)
                     {
                         Debug.WriteLine("Gig Inserted");
-                        await Navigation.PushModalAsync(new LoggedinTabbedPage_Client());
+                        await DisplayAlert("Success", "Gig Inserted", "OK");
                     }
                     else
                     {

@@ -47,8 +47,8 @@ namespace IPTMobileApp
         private async void PopulateOffers()
         {
             var client = new HttpClient();
-            client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", "cd53344c9a0e4abeb55ea6322888d4d6");
-            HttpResponseMessage httpResponse = await client.GetAsync("https://khudmadadbackend20221127230404.azurewebsites.net/api/offer/clientId/" + user["responseData"]["userId"]);
+            //client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", "cd53344c9a0e4abeb55ea6322888d4d6");
+            HttpResponseMessage httpResponse = await client.GetAsync(App.BaseURL+"api/offer/clientId/" + user["responseData"]["userId"]);
             Debug.WriteLine(httpResponse);
             string response = await httpResponse.Content.ReadAsStringAsync();
             var res = JObject.Parse(response);
@@ -68,7 +68,7 @@ namespace IPTMobileApp
             try
             {
                 var client = new HttpClient();
-                client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", "cd53344c9a0e4abeb55ea6322888d4d6");
+                //client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", "cd53344c9a0e4abeb55ea6322888d4d6");
                 HttpRequestMessage request = new HttpRequestMessage
                 {
                     Content = new StringContent(JsonConvert.SerializeObject(new
@@ -77,7 +77,7 @@ namespace IPTMobileApp
                         freelancerId = Int32.Parse(offerList[index]["freelancerId"].ToString()),
                     }), Encoding.UTF8, "application/json"),
                     Method = HttpMethod.Delete,
-                    RequestUri = new Uri("https://khudmadadbackendapi.azure-api.net/api/Offer/delete")
+                    RequestUri = new Uri(App.BaseURL + "api/Offer/delete")
                 };
                 HttpResponseMessage responseMessage = await client.SendAsync(request);
                 Debug.WriteLine(responseMessage);
@@ -127,9 +127,9 @@ namespace IPTMobileApp
                     //Debug.WriteLine(data);
 
                     var client = new HttpClient();
-                    client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", "cd53344c9a0e4abeb55ea6322888d4d6");
-                    HttpResponseMessage responseMessage = await client.PutAsync("https://khudmadadbackend20221127230404.azurewebsites.net/api/offer/updatestatus", data);
-                    HttpResponseMessage responseMessage1 = await client.DeleteAsync("https://khudmadadbackend20221127230404.azurewebsites.net/api/offer/delete/" + offerList[index]["gigId"].ToString());
+                    //client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", "cd53344c9a0e4abeb55ea6322888d4d6");
+                    HttpResponseMessage responseMessage = await client.PutAsync(App.BaseURL+"api/offer/updatestatus", data);
+                    HttpResponseMessage responseMessage1 = await client.DeleteAsync(App.BaseURL + "api/offer/delete/" + offerList[index]["gigId"].ToString());
                     //Debug.WriteLine(responseMessage);
 
                     if (responseMessage.IsSuccessStatusCode)
@@ -149,7 +149,7 @@ namespace IPTMobileApp
                             Debug.WriteLine(data.ToString());
 
                             var EmailClient = new HttpClient();
-                            HttpResponseMessage emailMessage = await EmailClient.PostAsync("https://khudmadadfunction12345.azurewebsites.net/api/ConfirmationEmail?", data);
+                            HttpResponseMessage emailMessage = await EmailClient.PostAsync(App.EmailURL, data);
                             if (responseMessage.IsSuccessStatusCode)
                             {
                                 Debug.WriteLine("Email Sent");

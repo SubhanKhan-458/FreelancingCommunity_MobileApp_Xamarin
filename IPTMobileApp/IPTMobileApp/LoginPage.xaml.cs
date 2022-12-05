@@ -37,8 +37,8 @@ namespace IPTMobileApp
                 try
                 {
                     var client = new HttpClient();
-                    client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", "cd53344c9a0e4abeb55ea6322888d4d6");
-                    HttpResponseMessage httpResponse = await client.GetAsync("https://khudmadadbackendapi.azure-api.net/api/users/userName/" + usernameEntry.Text);
+                    //client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", "cd53344c9a0e4abeb55ea6322888d4d6");
+                    HttpResponseMessage httpResponse = await client.GetAsync(App.BaseURL+"api/users/userName/" + usernameEntry.Text);
                     Debug.WriteLine(httpResponse);
                     string response = await httpResponse.Content.ReadAsStringAsync();
                     var res = JObject.Parse(response);
