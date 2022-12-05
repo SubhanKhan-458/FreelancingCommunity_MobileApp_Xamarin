@@ -47,7 +47,7 @@ namespace IPTMobileApp
             string response = await httpResponse.Content.ReadAsStringAsync();
             var res = JObject.Parse(response);
             Debug.WriteLine(res["responseData"]);
-            gigList = res["responseData"];
+            gigList = res["responseData"];  
             Debug.WriteLine(gigList.ToString());
 
             ListDetails = new ObservableCollection<Card>();
@@ -63,7 +63,6 @@ namespace IPTMobileApp
             var itemClicked = ((ListView)sender).SelectedItem;
             var index = ListDetails.IndexOf((Card)itemClicked);
             await Navigation.PushModalAsync(new GigModalPage(this.gigList[index]));
-            
         }
     }
 }

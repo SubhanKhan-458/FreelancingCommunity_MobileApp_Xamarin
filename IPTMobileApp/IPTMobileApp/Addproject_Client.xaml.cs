@@ -21,8 +21,6 @@ namespace IPTMobileApp
         public Addproject_Client()
 		{
 			InitializeComponent ();
-            //this.user = LoginPage.loggedInUser;
-            //Debug.WriteLine(user["responseData"]["roleId"]);
         }
 
         private async void Button_Clicked_1(object sender, EventArgs e)

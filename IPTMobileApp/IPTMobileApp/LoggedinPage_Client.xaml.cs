@@ -7,6 +7,7 @@ using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Linq;
 using System.Net.Http;
+using System.Net.NetworkInformation;
 using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -30,7 +31,7 @@ namespace IPTMobileApp
             public string FreelancerEmail { get; set; }
             public string FreelancerName { get; set; }
             public string FreelancerDesc { get; set; }
-            //public int OfferId { get; set; }
+            public string status { get; set; }
         }
         public ObservableCollection<Card> ListDetails { get; set; }
         JToken offerList;
@@ -57,7 +58,7 @@ namespace IPTMobileApp
             ListDetails = new ObservableCollection<Card>();
             for (int i = 0; i < offerList.Count() ; i++) //Like this make list and access each..
             {
-                ListDetails.Add(new Card { Img1 = "freelancer", PName = offerList[i]["gigName"].ToString(), PDescription = offerList[i]["gigDescription"].ToString(), PCost = offerList[i]["pay"].ToString(), PDeadline = offerList[i]["deadline"].ToString(), FreelancerName= offerList[i]["firstName"].ToString()  + " " + offerList[i]["lastName"].ToString(), FreelancerDesc= offerList[i]["freelancerDescription"].ToString(), FreelancerEmail= offerList[i]["email"].ToString() });
+                ListDetails.Add(new Card { Img1 = "freelancer", PName = offerList[i]["gigName"].ToString(), PDescription = offerList[i]["gigDescription"].ToString(), PCost = offerList[i]["pay"].ToString(), PDeadline = offerList[i]["deadline"].ToString(), FreelancerName= offerList[i]["firstName"].ToString()  + " " + offerList[i]["lastName"].ToString(), FreelancerDesc= offerList[i]["freelancerDescription"].ToString(), FreelancerEmail= offerList[i]["email"].ToString(), status= offerList[i]["status"].ToString() });
             }
             BindingContext = this;
         } 
@@ -95,7 +96,6 @@ namespace IPTMobileApp
             catch
             {
                 Debug.WriteLine("Offer Delete Error");
-                await Navigation.PushAsync(new LoginPage());
             }
         }
 
@@ -135,6 +135,7 @@ namespace IPTMobileApp
                     if (responseMessage.IsSuccessStatusCode)
                     {
                         Debug.WriteLine("Offer Updated");
+                        ListDetails[index].status = true.ToString();
                         await Navigation.PushModalAsync(new LoggedinTabbedPage_Client());
                         try
                         {
@@ -149,8 +150,6 @@ namespace IPTMobileApp
 
                             var EmailClient = new HttpClient();
                             HttpResponseMessage emailMessage = await EmailClient.PostAsync("https://khudmadadfunction12345.azurewebsites.net/api/ConfirmationEmail?", data);
-                            //Debug.WriteLine(responseMessage);
-
                             if (responseMessage.IsSuccessStatusCode)
                             {
                                 Debug.WriteLine("Email Sent");
@@ -193,7 +192,7 @@ namespace IPTMobileApp
         {
             var itemClicked = ((ListView)sender).SelectedItem;
             var index = ListDetails.IndexOf((Card)itemClicked);
-
+            
             Debug.WriteLine("Accept Button");
             Debug.WriteLine(index);
         }

@@ -45,11 +45,10 @@
                                             <!--Freelancer Email-->
                                             <Label Grid.Row="6" Grid.Column="0" Text="Freelancer Email: " Margin="5,0,0,0" HorizontalOptions="Start" FontSize="17" TextColor="Black" FontAttributes="Bold"/>
                                             <Label Grid.Row="6" Grid.Column="1" Text="{Binding FreelancerEmail}" HorizontalOptions="StartAndExpand" FontSize="17" TextColor="Black"/>
-
-                                            <!--
-                                            <Button Grid.Row="7" Grid.Column="0" Text="Accept" HorizontalOptions="End" FontSize="17" TextColor="Black" Clicked="Accept_Clicked"/>
-                                            <Button Grid.Row="7" Grid.Column="1" Text="Reject" HorizontalOptions="Start" FontSize="17" TextColor="Black" Clicked="Reject_Clicked"/>
-                                            -->
+                                            
+                                            <!--Freelancer Email-->
+                                            <Label Grid.Row="7" Grid.Column="0" Text="Offer Status: " Margin="5,0,0,0" HorizontalOptions="Start" FontSize="17" TextColor="Black" FontAttributes="Bold"/>
+                                            <Label Grid.Row="7" Grid.Column="1" Text="{Binding status}" HorizontalOptions="StartAndExpand" FontSize="17" TextColor="Black"/>
                                         </Grid>
 
                                     </StackLayout>

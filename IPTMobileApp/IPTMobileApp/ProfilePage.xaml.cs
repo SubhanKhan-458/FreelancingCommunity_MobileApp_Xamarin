@@ -26,8 +26,6 @@ namespace IPTMobileApp
         public string phoneNo { get; set; }
         public string desc { get; set; }
 
-
-
 		public ProfilePage ()
 		{
 			InitializeComponent ();
@@ -35,7 +33,6 @@ namespace IPTMobileApp
             Debug.WriteLine(user["responseData"]["userId"]);
             fname = user["responseData"]["firstName"].ToString();
             lname = user["responseData"]["lastName"].ToString();
-            //email = "todo email";
             email = user["responseData"]["email"].ToString();
             username = user["responseData"]["userName"].ToString();
             password = user["responseData"]["password"].ToString();

@@ -21,14 +21,6 @@ namespace IPTMobileApp
         public LoggedinTabbedPage_Client()
         {
             InitializeComponent();
-
-
-        }
-        public LoggedinTabbedPage_Client(JToken gig)
-        {
-            InitializeComponent();
-            LoggedinTabbedPage_Client.gig = gig;
-
         }
     }
 }

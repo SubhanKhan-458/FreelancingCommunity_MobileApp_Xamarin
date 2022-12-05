@@ -20,6 +20,8 @@ namespace IPTMobileApp
         public GigModalPage(JToken gig)
         {
             InitializeComponent();
+            
+            Debug.WriteLine(gig);
 
             this.gig = gig;
             GigName.Text = gig["gigName"].ToString();
@@ -41,15 +43,17 @@ namespace IPTMobileApp
             {
                 try
                 {
-                    //Debug.WriteLine(GigDeadline.GetType().ToString());
-                    //if (GigDeadline.GetType() == typeof(String))
-                    //{
-                       // GigDeadline = DateTime.Parse(GigDeadline.ToString());
-                    //}
+                    Debug.WriteLine(this.gig["gigId"].ToString());
+                    Debug.WriteLine(LoginPage.loggedInUser["responseData"]["userId"].ToString());
+                    Debug.WriteLine(GigName.Text);
+                    Debug.WriteLine(GigDescription.Text);
+                    Debug.WriteLine(GigPay.Text);
+                    Debug.WriteLine(GigDeadline.Text);
+
                     var data = new StringContent(JsonConvert.SerializeObject(new
                     {
-                        gigId = this.gig["gigId"].ToString(),
-                        creatorId = LoginPage.loggedInUser["responseData"]["userId"].ToString(),
+                        gigId = Int32.Parse(this.gig["gigId"].ToString()),
+                        creatorId = Int32.Parse(LoginPage.loggedInUser["responseData"]["userId"].ToString()),
                         gigName = GigName.Text,
                         description = GigDescription.Text,
                         pay = Double.Parse(GigPay.Text),
@@ -91,8 +95,6 @@ namespace IPTMobileApp
         {
             try
             {
-                //if (GigDeadline.GetType() == typeof(String))
-                //DateTime.Parse(GigDeadline.);
                 Debug.WriteLine(GigDeadline.GetType().ToString());
                 var client = new HttpClient();
                 client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", "cd53344c9a0e4abeb55ea6322888d4d6");
@@ -101,8 +103,8 @@ namespace IPTMobileApp
                     Content = new StringContent(JsonConvert.SerializeObject(new
                     {
                         
-                        gigId = gig["gigId"].ToString(),
-                        creatorId = LoginPage.loggedInUser["responseData"]["userId"].ToString(),
+                        gigId = Int32.Parse(this.gig["gigId"].ToString()),
+                        creatorId = Int32.Parse(LoginPage.loggedInUser["responseData"]["userId"].ToString()),
                         gigName = GigName.Text,
                         description = GigDescription.Text,
                         pay = Double.Parse(GigPay.Text),
